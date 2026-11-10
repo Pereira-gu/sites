@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sites profissionais para negócios locais | Gustavo Pereira · Sites</title>
+  <meta name="description" content="Sua loja precisa de um site? Vitrine, catálogo, agendamento e painel para negócios locais. Veja planos e valores e chame no WhatsApp.">
+  <meta name="theme-color" content="#FF5A1F">
+
+  <!-- Compartilhamento (WhatsApp, Instagram, Facebook) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Gustavo Pereira · Sites">
+  <meta property="og:title" content="Sua loja precisa de um site?">
+  <meta property="og:description" content="Sites profissionais para negócios locais. Veja planos e valores e chame no WhatsApp.">
+  <!-- O WhatsApp só mostra a imagem com o endereço completo. Se mudar o domínio, troque aqui e no og:url. -->
+  <meta property="og:url" content="https://pereira-gu.github.io/sites/">
+  <meta property="og:image" content="https://pereira-gu.github.io/sites/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Sua loja precisa de um site? Etiqueta de preço sobre fundo laranja.">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Única fonte externa: títulos. O texto usa a fonte do próprio aparelho. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Ícone do WhatsApp, reaproveitado em todos os botões -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+  </svg>
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- 1. TOPO -->
+  <header class="topo">
+    <div class="caixa topo__caixa">
+      <p class="marca" data-texto="marca">Gustavo Pereira · Sites</p>
+
+      <div class="topo__titulo">
+        <h1>
+          <span class="linha"><span>Sua loja </span></span>
+          <span class="linha"><span>precisa </span></span>
+          <span class="linha"><span>de um </span></span>
+          <span class="linha"><span>site?</span></span>
+        </h1>
+
+        <!-- A etiqueta pega o menor preço automaticamente (script.js) -->
+        <div class="etiqueta-solta">
+          <span class="etiqueta-solta__fio" aria-hidden="true"></span>
+          <p class="etiqueta-solta__corpo">
+            <span class="etiqueta-solta__furo" aria-hidden="true"></span>
+            <small>a partir de</small>
+            <strong>R$&nbsp;<span data-menor-preco></span></strong>
+          </p>
+        </div>
+      </div>
+
+      <p class="topo__sub">Sites profissionais para negócios locais</p>
+
+      <div class="topo__botoes">
+        <a class="btn btn--tinta" data-wa href="#">
+          <svg class="btn__ico" aria-hidden="true"><use href="#i-wa"/></svg>
+          Chamar no WhatsApp
+        </a>
+        <a class="btn btn--contorno" href="#planos">Ver planos</a>
+      </div>
+    </div>
+
+    <div class="faixa" aria-hidden="true">
+      <div class="faixa__trilho">
+        <span>Vitrine</span><span>Catálogo</span><span>Agendamento</span><span>Painel</span>
+        <span>Vitrine</span><span>Catálogo</span><span>Agendamento</span><span>Painel</span>
+        <span>Vitrine</span><span>Catálogo</span><span>Agendamento</span><span>Painel</span>
+        <span>Vitrine</span><span>Catálogo</span><span>Agendamento</span><span>Painel</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <noscript>
+      <p class="sem-js">Para ver os planos e valores, chame no <a href="https://wa.me/5511915072940">WhatsApp</a>.</p>
+    </noscript>
+
+    <!-- 2. TIPOS DE SITE -->
+    <section class="secao secao--branca" aria-labelledby="t-tipos">
+      <div class="caixa">
+        <h2 class="titulo reveal" id="t-tipos">Qual site combina com sua loja?</h2>
+
+        <ul class="tipos">
+          <li class="tipo tipo--vitrine reveal">
+            <svg class="tipo__ico" viewBox="0 0 48 48" aria-hidden="true">
+              <path class="traco" pathLength="1" d="M6 20 10 7h28l4 13"/>
+              <path class="traco" pathLength="1" d="M6 20a6 6 0 0 0 12 0 6 6 0 0 0 12 0 6 6 0 0 0 12 0"/>
+              <path class="traco" pathLength="1" d="M10 26v15h28V26"/>
+              <path class="traco" pathLength="1" d="M20 41V31h8v10"/>
+            </svg>
+            <h3>Vitrine</h3>
+            <p>Apresenta sua loja e mostra onde te achar.</p>
+          </li>
+          <li class="tipo tipo--catalogo reveal">
+            <svg class="tipo__ico" viewBox="0 0 48 48" aria-hidden="true">
+              <path class="traco" pathLength="1" d="M25 6h17v17L23 42 6 25 25 6Z"/>
+              <circle class="traco" pathLength="1" cx="34" cy="14" r="3"/>
+            </svg>
+            <h3>Catálogo de produtos</h3>
+            <p>Produtos com foto e preço, prontos para pedir.</p>
+          </li>
+          <li class="tipo tipo--agenda reveal">
+            <svg class="tipo__ico" viewBox="0 0 48 48" aria-hidden="true">
+              <rect class="traco" pathLength="1" x="7" y="10" width="34" height="31" rx="3"/>
+              <path class="traco" pathLength="1" d="M7 19h34M16 5v9M32 5v9"/>
+              <path class="traco" pathLength="1" d="m17 30 5 5 9-10"/>
+            </svg>
+            <h3>Agendamento online</h3>
+            <p>O cliente marca o horário sozinho.</p>
+          </li>
+          <li class="tipo tipo--painel reveal">
+            <svg class="tipo__ico" viewBox="0 0 48 48" aria-hidden="true">
+              <rect class="traco" pathLength="1" x="6" y="8" width="36" height="32" rx="3"/>
+              <path class="traco" pathLength="1" d="M15 32v-8M24 32V16M33 32v-12"/>
+            </svg>
+            <h3>Painel para o dono</h3>
+            <p>Pedidos e clientes organizados em um só lugar.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. PLANOS: os valores ficam no topo do script.js -->
+    <section class="secao secao--tinta" id="planos" aria-labelledby="t-planos">
+      <div class="caixa">
+        <h2 class="titulo reveal" id="t-planos">Planos e valores</h2>
+        <p class="apoio reveal">Escolha pelo que sua loja precisa hoje.</p>
+
+        <div class="planos" data-planos></div>
+        <div data-manutencao></div>
+        <div data-oferta></div>
+        <ul class="letras-miudas reveal" data-condicoes></ul>
+      </div>
+    </section>
+
+    <!-- 4. COMO FUNCIONA -->
+    <section class="secao secao--branca" aria-labelledby="t-como">
+      <div class="caixa">
+        <h2 class="titulo reveal" id="t-como">Como funciona</h2>
+
+        <ol class="passos">
+          <li class="passo reveal"><span class="passo__n" aria-hidden="true">1</span><div><h3>Conversa pelo WhatsApp</h3><p>Você me conta da loja e do que precisa.</p></div></li>
+          <li class="passo reveal"><span class="passo__n" aria-hidden="true">2</span><div><h3>Proposta</h3><p>Envio o plano certo para o seu caso e o valor.</p></div></li>
+          <li class="passo reveal"><span class="passo__n" aria-hidden="true">3</span><div><h3>Protótipo para aprovar</h3><p>Você vê como vai ficar e pede os ajustes.</p></div></li>
+          <li class="passo reveal"><span class="passo__n" aria-hidden="true">4</span><div><h3>Publicação</h3><p>Site no ar, pronto para divulgar.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 5. PORTFÓLIO: os cases ficam no topo do script.js -->
+    <section class="secao secao--tinta" aria-labelledby="t-portfolio">
+      <div class="caixa">
+        <h2 class="titulo reveal" id="t-portfolio">Portfólio</h2>
+        <p class="apoio reveal">Sites de demonstração. Abra no celular e teste.</p>
+        <div class="portfolio" data-portfolio></div>
+      </div>
+    </section>
+
+    <!-- 6. PERGUNTAS FREQUENTES -->
+    <section class="secao secao--branca" aria-labelledby="t-faq">
+      <div class="caixa caixa--estreita">
+        <h2 class="titulo reveal" id="t-faq">Perguntas frequentes</h2>
+
+        <div class="faq reveal">
+          <details name="faq">
+            <summary>Quanto tempo leva?</summary>
+            <p>Em torno de uma a duas semanas para os pacotes simples.</p>
+          </details>
+          <details name="faq">
+            <summary>Como é o pagamento?</summary>
+            <p>Por Pix: 50% de sinal para começar e 50% na entrega.</p>
+          </details>
+          <details name="faq">
+            <summary>O que é domínio?</summary>
+            <p>É o endereço do site na internet, como sualoja.com.br. O domínio próprio fica por conta do cliente.</p>
+          </details>
+          <details name="faq">
+            <summary>O que está incluso na manutenção?</summary>
+            <p>Pequenas alterações, atualização de preços e fotos, e suporte. É opcional e custa R$&nbsp;<span data-preco-manutencao></span> por mês.</p>
+          </details>
+          <details name="faq">
+            <summary>Quem é o dono do site?</summary>
+            <p>Você, o cliente. O site é seu.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CHAMADA FINAL -->
+    <section class="final" aria-labelledby="t-final">
+      <div class="caixa">
+        <h2 class="final__titulo reveal" id="t-final">Vamos colocar sua loja no ar?</h2>
+        <div class="final__botoes reveal">
+          <div class="final__cta">
+            <a class="btn btn--tinta" data-wa href="#">
+              <svg class="btn__ico" aria-hidden="true"><use href="#i-wa"/></svg>
+              Chamar no WhatsApp
+            </a>
+            <p class="final__confianca" data-texto="confianca"></p>
+          </div>
+          <a class="link-insta" data-insta href="#"></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="caixa rodape__caixa">
+      <p><span data-texto="marca">Gustavo Pereira · Sites</span> · <span data-ano></span></p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante -->
+  <a class="flutuante" data-wa href="#" aria-label="Chamar no WhatsApp">
+    <svg aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
+</body>
+</html>
