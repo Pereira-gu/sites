@@ -5,6 +5,7 @@
 :root {
   --laranja: #FF5A1F;
   --laranja-claro: #FFC2A8;
+  --laranja-palido: #FFEAE0;
   --brasa: #7A2B0B;
   --tinta: #16130F;
   --tinta-2: #2A2620;
@@ -423,7 +424,7 @@ html.js .etapa:not(.aberta) .etapa__texto { display: none; }
    ========================================================================== */
 .perguntas { padding-block: var(--secao); }
 .fichas { display: grid; gap: 8px; margin-top: 40px; }
-.ficha { background: var(--laranja-claro); color: var(--tinta); transition: background-color .25s, color .25s; }
+.ficha { background: var(--laranja-palido); color: var(--tinta); transition: background-color .25s, color .25s; }
 .ficha[open] { background: var(--tinta); color: var(--branco); --foco: var(--laranja); }
 .ficha summary {
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
@@ -442,9 +443,7 @@ html.js .etapa:not(.aberta) .etapa__texto { display: none; }
 @media (hover: hover) { .ficha:not([open]) summary:hover::after { background: var(--laranja); color: var(--tinta); } }
 .ficha p { padding: 0 20px 24px; max-width: 52ch; }
 @media (min-width: 900px) {
-  .perguntas__grade { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 32px; align-items: start; }
-  .perguntas__grade .titulo { grid-column: 1 / 5; position: sticky; top: 32px; }
-  .fichas { grid-column: 5 / 13; margin-top: 0; }
+  .fichas { margin-top: 56px; }
   .ficha summary { padding: 24px 28px; }
   .ficha p { padding: 0 28px 28px; }
 }
