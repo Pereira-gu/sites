@@ -5,7 +5,6 @@
 :root {
   --laranja: #FF5A1F;
   --laranja-claro: #FFC2A8;
-  --laranja-palido: #FFEAE0;
   --brasa: #7A2B0B;
   --tinta: #16130F;
   --tinta-2: #2A2620;
@@ -420,46 +419,45 @@ html.js .etapa:not(.aberta) .etapa__texto { display: none; }
 }
 
 /* ==========================================================================
-   8. Perguntas: lista que abre uma por vez
+   8. Perguntas: lista em letras grandes, faixa laranja ao passar o mouse
    ========================================================================== */
 .perguntas { padding-block: var(--secao); }
-.fichas { display: grid; gap: 8px; margin-top: 40px; }
-.ficha { background: var(--laranja-palido); color: var(--tinta); transition: background-color .25s, color .25s; }
-.ficha[open] { background: var(--tinta); color: var(--branco); --foco: var(--laranja); }
+.fichas { margin-top: 48px; }
+.ficha { transition: background-color .3s var(--saida), color .3s var(--saida); }
+.ficha + .ficha { margin-top: 4px; }
 .ficha summary {
-  display: flex; align-items: center; justify-content: space-between; gap: 20px;
-  padding: 20px; cursor: pointer; list-style: none;
+  position: relative; isolation: isolate;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding: 22px 16px; cursor: pointer; list-style: none;
 }
 .ficha summary::-webkit-details-marker { display: none; }
-.ficha__pergunta { font-size: var(--t-lead); font-weight: 800; line-height: 1.25; }
+/* faixa que entra da esquerda quando o mouse passa */
+.ficha summary::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: var(--laranja-claro);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .4s var(--saida);
+}
+@media (hover: hover) { .ficha:not([open]) summary:hover::before { transform: scaleX(1); } }
+.ficha__pergunta {
+  font: 900 clamp(1.75rem, 3.4vw, 3.25rem)/1 var(--fonte-titulo);
+  text-transform: uppercase; letter-spacing: -.005em;
+  transition: translate .3s var(--saida);
+}
+@media (hover: hover) { .ficha summary:hover .ficha__pergunta { translate: 12px 0; } }
 .ficha summary::after {
   content: "+"; flex: none;
-  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
-  background: var(--tinta); color: var(--branco);
-  font: 700 26px/1 var(--fonte-texto);
-  transition: rotate .25s var(--saida), background-color .25s, color .25s;
+  font: 900 clamp(2rem, 3.4vw, 3.25rem)/1 var(--fonte-titulo);
+  transition: rotate .35s var(--saida);
 }
-.ficha[open] summary::after { rotate: 45deg; background: var(--laranja); color: var(--tinta); }
-@media (hover: hover) { .ficha:not([open]) summary:hover::after { background: var(--laranja); color: var(--tinta); } }
-.ficha p { padding: 0 20px 24px; max-width: 52ch; }
-/* No computador: fileira de caixinhas; a que está sob o mouse abre */
+.ficha[open] { background: var(--laranja); }
+.ficha[open] summary::after { rotate: 45deg; }
+.ficha p { padding: 0 16px 28px; max-width: 52ch; font-size: var(--t-lead); line-height: 1.4; }
 @media (min-width: 900px) {
-  .fichas { display: flex; gap: 8px; height: 420px; margin-top: 56px; }
-  .ficha { position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; transition: flex-grow .5s var(--saida), background-color .25s, color .25s; }
-  .ficha[open] { flex-grow: 4.6; }
-  .ficha summary { height: 100%; padding: 24px; align-items: flex-start; }
-  .ficha:not([open]) summary::after { position: absolute; top: 20px; left: 50%; translate: -50% 0; }
-  .ficha:not([open]) .ficha__pergunta {
-    position: absolute; left: 50%; bottom: 24px; translate: -50% 0;
-    writing-mode: vertical-rl; rotate: 180deg; white-space: nowrap;
-    font-size: var(--t-corpo);
-  }
-  .ficha[open] summary { height: auto; padding: 28px; }
-  .ficha p { position: absolute; left: 0; bottom: 0; width: min(46ch, 100%); padding: 0 28px 32px; font-size: var(--t-lead); line-height: 1.4; }
-  .ficha[open] p { animation: resposta .4s .15s var(--saida) both; }
-  .ficha:not([open]):hover { background: var(--laranja-claro); }
+  .fichas { margin-top: 64px; }
+  .ficha summary { padding: 26px 28px; }
+  .ficha p { padding: 0 28px 36px; }
 }
-@keyframes resposta { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 
 /* ==========================================================================
    9. Orçamento em 3 toques
