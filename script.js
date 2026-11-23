@@ -178,3 +178,16 @@ if ('IntersectionObserver' in window && flutuante) {
   }, { threshold: 0.15 });
   $$('.heroi, .orcamento, .rodape').forEach((el) => secoes.observe(el));
 }
+
+/* --- Perguntas: no computador, passar o mouse abre a caixinha --- */
+const fichas = $$('[data-fichas] .ficha');
+if (matchMedia('(min-width: 900px)').matches) {
+  fichas.forEach((ficha) => ficha.addEventListener('pointerenter', (e) => {
+    if (e.pointerType !== 'mouse' || ficha.open) return;
+    fichas.forEach((f) => { f.open = f === ficha; });
+  }));
+}
+/* Uma aberta por vez também nos navegadores que não fecham as outras sozinhos */
+fichas.forEach((ficha) => ficha.addEventListener('toggle', () => {
+  if (ficha.open) fichas.forEach((f) => { if (f !== ficha) f.open = false; });
+}));

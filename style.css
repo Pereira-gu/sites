@@ -442,11 +442,24 @@ html.js .etapa:not(.aberta) .etapa__texto { display: none; }
 .ficha[open] summary::after { rotate: 45deg; background: var(--laranja); color: var(--tinta); }
 @media (hover: hover) { .ficha:not([open]) summary:hover::after { background: var(--laranja); color: var(--tinta); } }
 .ficha p { padding: 0 20px 24px; max-width: 52ch; }
+/* No computador: fileira de caixinhas; a que está sob o mouse abre */
 @media (min-width: 900px) {
-  .fichas { margin-top: 56px; }
-  .ficha summary { padding: 24px 28px; }
-  .ficha p { padding: 0 28px 28px; }
+  .fichas { display: flex; gap: 8px; height: 420px; margin-top: 56px; }
+  .ficha { position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; transition: flex-grow .5s var(--saida), background-color .25s, color .25s; }
+  .ficha[open] { flex-grow: 4.6; }
+  .ficha summary { height: 100%; padding: 24px; align-items: flex-start; }
+  .ficha:not([open]) summary::after { position: absolute; top: 20px; left: 50%; translate: -50% 0; }
+  .ficha:not([open]) .ficha__pergunta {
+    position: absolute; left: 50%; bottom: 24px; translate: -50% 0;
+    writing-mode: vertical-rl; rotate: 180deg; white-space: nowrap;
+    font-size: var(--t-corpo);
+  }
+  .ficha[open] summary { height: auto; padding: 28px; }
+  .ficha p { position: absolute; left: 0; bottom: 0; width: min(46ch, 100%); padding: 0 28px 32px; font-size: var(--t-lead); line-height: 1.4; }
+  .ficha[open] p { animation: resposta .4s .15s var(--saida) both; }
+  .ficha:not([open]):hover { background: var(--laranja-claro); }
 }
+@keyframes resposta { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 
 /* ==========================================================================
    9. Orçamento em 3 toques
