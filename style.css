@@ -419,31 +419,35 @@ html.js .etapa:not(.aberta) .etapa__texto { display: none; }
 }
 
 /* ==========================================================================
-   8. Perguntas: fichas com abas
+   8. Perguntas: lista que abre uma por vez
    ========================================================================== */
 .perguntas { padding-block: var(--secao); }
-.fichas { margin-top: 88px; --passo: 26px; }
-@media (min-width: 700px) { .fichas { --passo: 96px; } }
-.ficha { position: relative; margin-top: -8px; }
-.ficha + .ficha { margin-top: 36px; }
-.ficha { --fundo: var(--laranja); --texto: var(--tinta); background: var(--fundo); color: var(--texto); }
-.ficha:nth-child(3n+2) { --fundo: var(--tinta); --texto: var(--branco); --foco: var(--laranja); }
-.ficha:nth-child(3n)   { --fundo: var(--laranja-claro); }
-.ficha:nth-child(1) { --i: 0; } .ficha:nth-child(2) { --i: 1; } .ficha:nth-child(3) { --i: 2; }
-.ficha:nth-child(4) { --i: 3; } .ficha:nth-child(5) { --i: 4; } .ficha:nth-child(6) { --i: 5; } .ficha:nth-child(7) { --i: 6; }
-.ficha summary { display: block; padding: 18px 20px; cursor: pointer; list-style: none; }
-.ficha summary::-webkit-details-marker { display: none; }
-.ficha__aba {
-  position: absolute; bottom: 100%; left: calc(var(--i) * var(--passo));
-  min-width: 128px; padding: 8px 28px 6px 14px;
-  background: var(--fundo); color: var(--texto);
-  font-size: var(--t-pequeno); font-weight: 800;
-  clip-path: polygon(0 0, 82% 0, 100% 100%, 0 100%);
+.fichas { display: grid; gap: 8px; margin-top: 40px; }
+.ficha { background: var(--laranja-claro); color: var(--tinta); transition: background-color .25s, color .25s; }
+.ficha[open] { background: var(--tinta); color: var(--branco); --foco: var(--laranja); }
+.ficha summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  padding: 20px; cursor: pointer; list-style: none;
 }
-.ficha__pergunta { display: block; font-size: var(--t-lead); font-weight: 800; line-height: 1.25; }
-.ficha__pergunta::after { content: " +"; }
-.ficha[open] .ficha__pergunta::after { content: ""; }
-.ficha p { padding: 0 20px 24px; max-width: 50ch; }
+.ficha summary::-webkit-details-marker { display: none; }
+.ficha__pergunta { font-size: var(--t-lead); font-weight: 800; line-height: 1.25; }
+.ficha summary::after {
+  content: "+"; flex: none;
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  background: var(--tinta); color: var(--branco);
+  font: 700 26px/1 var(--fonte-texto);
+  transition: rotate .25s var(--saida), background-color .25s, color .25s;
+}
+.ficha[open] summary::after { rotate: 45deg; background: var(--laranja); color: var(--tinta); }
+@media (hover: hover) { .ficha:not([open]) summary:hover::after { background: var(--laranja); color: var(--tinta); } }
+.ficha p { padding: 0 20px 24px; max-width: 52ch; }
+@media (min-width: 900px) {
+  .perguntas__grade { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 32px; align-items: start; }
+  .perguntas__grade .titulo { grid-column: 1 / 5; position: sticky; top: 32px; }
+  .fichas { grid-column: 5 / 13; margin-top: 0; }
+  .ficha summary { padding: 24px 28px; }
+  .ficha p { padding: 0 28px 28px; }
+}
 
 /* ==========================================================================
    9. Orçamento em 3 toques
