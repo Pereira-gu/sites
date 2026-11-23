@@ -1,0 +1,7 @@
+/* Removível: só age quando motion.js adiciona a classe .motion */
+.motion .sec .sec-head,.motion .sec .card,.motion .sec .reveal,.motion .sec figure{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.motion .sec .in{opacity:1;transform:none}
+.hero-copy>*{animation:sobe .7s cubic-bezier(.2,.7,.2,1) both}
+.hero-copy>*:nth-child(2){animation-delay:.06s}.hero-copy>*:nth-child(3){animation-delay:.12s}.hero-copy>*:nth-child(4){animation-delay:.18s}.hero-copy>*:nth-child(5){animation-delay:.24s}
+@keyframes sobe{from{opacity:0;transform:translateY(14px)}}
+@media (prefers-reduced-motion:reduce){.hero-copy>*{animation:none}}

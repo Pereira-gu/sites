@@ -1,0 +1,123 @@
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Banho e tosa · Pituba, Salvador</span>
+      <h1>Seu pet volta cheiroso, calmo e com laço novo</h1>
+      <p class="lead">Banho e tosa sem gaiola apertada, com secagem morna e equipe que entende de bicho medroso. A gente busca e leva em casa.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contato" data-wa="Oi! Quero agendar um banho na Patas & Cia.">Agendar banho</a>
+        <a class="btn btn-ghost" href="#calculadora">Calcular preço</a>
+      </div>
+      <ul class="hero-facts">
+        <li><strong>Leva-e-traz</strong>na Pituba e região</li>
+        <li><strong>Sem sedação</strong>nunca, em nenhum caso</li>
+        <li><strong>Fotos no WhatsApp</strong>durante o banho</li>
+      </ul>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="bolha b1"></div><div class="bolha b2"></div><div class="bolha b3"></div>
+      <div class="pata"><span></span><span></span><span></span><span></span></div>
+      <div class="balao">Mel acabou de sair do banho! 🛁<small>exemplo</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="servicos">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Serviços</span><h2>Tudo pro seu pet ficar lindo</h2></div>
+    <div class="grid" style="--min:220px">
+      <article class="card c1"><h3>Banho completo</h3><p>Shampoo para o tipo de pelo, limpeza de ouvidos, corte de unhas e perfume suave.</p></article>
+      <article class="card c2"><h3>Tosa higiênica</h3><p>Barriga, patinhas e região íntima. Ajuda no calor de Salvador.</p></article>
+      <article class="card c3"><h3>Tosa na tesoura</h3><p>Corte por raça ou do jeito que você pedir, feito com calma.</p></article>
+      <article class="card c4"><h3>Hidratação</h3><p>Para pelos ressecados e cães que vivem na praia.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="calculadora">
+  <div class="container split wide-r">
+    <div class="sec-head">
+      <span class="eyebrow">Calculadora</span><h2>Quanto fica o banho do seu pet?</h2>
+      <p>Escolha o porte e os serviços. O valor aparece na hora e vai junto na mensagem do WhatsApp. <span class="ficticio">preços fictícios</span></p>
+      <p class="note">O valor final é confirmado no atendimento, depois de ver o pelo.</p>
+    </div>
+    <form class="panel form" data-calc aria-label="Calculadora de preço">
+      <fieldset><legend class="legend">Porte</legend>
+        <div class="options">
+          <div class="opt"><input type="radio" name="porte" id="p-p" data-mult="1" data-label="Porte pequeno" checked><label for="p-p">Pequeno<small>até 10 kg</small></label></div>
+          <div class="opt"><input type="radio" name="porte" id="p-m" data-mult="1.35" data-label="Porte médio"><label for="p-m">Médio<small>10 a 25 kg</small></label></div>
+          <div class="opt"><input type="radio" name="porte" id="p-g" data-mult="1.8" data-label="Porte grande"><label for="p-g">Grande<small>acima de 25 kg</small></label></div>
+        </div>
+      </fieldset>
+      <fieldset><legend class="legend">Pelo</legend>
+        <div class="options">
+          <div class="opt"><input type="radio" name="pelo" id="pl-c" data-mult="1" data-label="Pelo curto" checked><label for="pl-c">Curto</label></div>
+          <div class="opt"><input type="radio" name="pelo" id="pl-l" data-mult="1.2" data-label="Pelo longo"><label for="pl-l">Longo ou dupla camada</label></div>
+        </div>
+      </fieldset>
+      <fieldset><legend class="legend">Serviços</legend>
+        <div class="options" style="--opt-min:200px">
+          <div class="opt"><input type="checkbox" id="s-banho" data-price="55" data-label="Banho completo" checked><label for="s-banho">Banho completo<small>R$ 55 no porte P</small></label></div>
+          <div class="opt"><input type="checkbox" id="s-hig" data-price="20" data-label="Tosa higiênica"><label for="s-hig">Tosa higiênica<small>+ R$ 20</small></label></div>
+          <div class="opt"><input type="checkbox" id="s-tes" data-price="45" data-label="Tosa na tesoura"><label for="s-tes">Tosa na tesoura<small>+ R$ 45</small></label></div>
+          <div class="opt"><input type="checkbox" id="s-hid" data-price="30" data-label="Hidratação"><label for="s-hid">Hidratação<small>+ R$ 30</small></label></div>
+          <div class="opt"><input type="checkbox" id="s-lt" data-flat="15" data-label="Leva-e-traz"><label for="s-lt">Leva-e-traz<small>+ R$ 15 fixo</small></label></div>
+        </div>
+      </fieldset>
+      <div class="total-box" aria-live="polite">
+        <div><span class="total-label">Estimativa</span><div class="total" data-total>R$ 55,00</div></div>
+        <a class="btn btn-primary" href="#" data-calc-wa="Oi! Quero agendar na Patas & Cia:">Agendar com esse valor</a>
+      </div>
+      <p class="note" data-summary></p>
+    </form>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="pacotes">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Pacotes</span><h2>Banho todo mês, preço menor</h2><p>Pacotes com validade de 60 dias, para usar como preferir. <span class="ficticio">valores fictícios</span></p></div>
+    <div class="grid">
+      <article class="card"><h3>Pacote 2 banhos</h3><p>Ótimo para quem dá banho a cada 15 dias em pet de pelo curto.</p><p class="price push">5% off</p><a class="btn btn-ghost" href="#" data-wa="Quero saber do pacote de 2 banhos na Patas & Cia.">Quero esse</a></article>
+      <article class="card destaque"><span class="selo">Mais vendido</span><h3>Pacote 4 banhos</h3><p>Um banho por semana, com tosa higiênica grátis no último.</p><p class="price push">12% off</p><a class="btn btn-primary" href="#" data-wa="Quero saber do pacote de 4 banhos na Patas & Cia.">Quero esse</a></article>
+      <article class="card"><h3>Spa do mês</h3><p>4 banhos, 1 tosa na tesoura e 2 hidratações. Leva-e-traz incluso.</p><p class="price push">18% off</p><a class="btn btn-ghost" href="#" data-wa="Quero saber do Spa do mês na Patas & Cia.">Quero esse</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="leva-e-traz">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Leva-e-traz</span><h2>A gente busca, você nem sai de casa</h2></div>
+    <ol class="steps">
+      <li><h3>Agende</h3><p>Escolha dia e horário pelo WhatsApp e informe o endereço.</p></li>
+      <li><h3>Buscamos</h3><p>Carro climatizado, caixinha de transporte limpa a cada viagem.</p></li>
+      <li><h3>Banho e fotos</h3><p>Você recebe fotos do seu pet durante o atendimento.</p></li>
+      <li><h3>Entregamos</h3><p>De volta em até 3 horas, cheiroso e de laço novo.</p></li>
+    </ol>
+    <p class="note" style="margin-top:1.5rem">Atendemos Pituba, Itaigara, Caminho das Árvores, Rio Vermelho, Costa Azul e Stiep.</p>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="duvidas">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Dúvidas</span><h2>Perguntas que todo tutor faz</h2></div>
+    <div class="faq">
+      <details><summary>Meu cachorro é bravo ou medroso. Vocês atendem?</summary><p>Atendemos, sim. Separamos um horário mais calmo, sem outros pets por perto, e a mesma pessoa cuida dele do começo ao fim. Nunca usamos sedação.</p></details>
+      <details><summary>Precisa de carteira de vacinação?</summary><p>Sim. Pedimos as vacinas V8 ou V10 e antirrábica em dia. Pode mandar foto da carteirinha pelo WhatsApp.</p></details>
+      <details><summary>Vocês atendem gatos?</summary><p>Atendemos às terças e quintas de manhã, em sala separada dos cães, para o gato ficar tranquilo.</p></details>
+      <details><summary>Quanto tempo demora?</summary><p>Banho em porte pequeno leva cerca de 1 hora. Com tosa, até 2 horas e meia. Avisamos quando estiver pronto.</p></details>
+      <details><summary>E se tiver pulga ou carrapato?</summary><p>Fazemos banho terapêutico com produto específico e avisamos você antes, porque tem custo adicional.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contato">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">Endereço</span><h2>Rua Paraíba, 190 · Pituba</h2>
+      <p class="note">Endereço fictício · Salvador/BA</p>
+      <dl class="info"><div><dt>Horários</dt><dd>Seg a sex, 8h às 18h · Sábado, 8h às 14h</dd></div></dl>
+      <div class="hero-actions"><a class="btn btn-primary" href="#" data-wa="Oi! Quero agendar um banho na Patas & Cia.">Agendar banho</a></div>
+    </div>
+    <div class="mapa" role="img" aria-label="Mapa ilustrativo da Pituba com a localização do pet shop"><span class="pin">Patas &amp; Cia</span></div>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+/* Navalha Club · escuro, industrial, vintage */
+:root{
+  --bg:#141210;--surface:#1C1916;--card:#211D19;--card-alt:#141210;
+  --text:#EDE6DA;--muted:#B3A898;--border:#3A332C;--border-strong:#5A4F44;
+  --primary:#C8963E;--primary-hover:#DDAA52;--on-primary:#141210;--accent:#8A2B1F;
+  --eyebrow:#C8963E;--price:#EDE6DA;--stars:#C8963E;
+  --font-display:"Bebas Neue",Impact,sans-serif;--font-body:"Barlow",system-ui,sans-serif;
+  --display-weight:400;--display-tracking:.02em;--h1-max:5.6rem;--h2-max:3.6rem;
+  --radius:2px;--radius-sm:2px;--radius-btn:2px;--radius-chip:2px;
+  --btn-case:uppercase;--btn-tracking:.08em;
+  --header-bg:rgba(20,18,16,.94);--header-solid:#141210;--demo-bg:#C8963E;--demo-text:#141210;
+  --footer-bg:#0C0B0A;--footer-text:#B3A898;--map-bg:#2A2521;--map-road:rgba(200,150,62,.35);
+  --avatar-bg:#2E2822;--avatar-text:#C8963E;--avatar-radius:2px;--tag-bg:#2E2822;--tag-text:#C8963E;
+}
+body{background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.012) 0 2px,transparent 2px 6px)}
+.brand{font-size:1.9rem;letter-spacing:.06em}
+.hero{border-bottom:1px solid var(--border)}
+.hero-art{min-height:340px;display:grid;place-items:center}
+.placa{border:3px solid var(--primary);padding:2rem 2.5rem;text-align:center;font-family:var(--font-display);color:var(--primary);box-shadow:inset 0 0 0 6px var(--bg),inset 0 0 0 8px var(--primary);background:radial-gradient(circle at 50% 40%,#2A241E,#141210)}
+.placa strong{display:block;font-size:clamp(3.5rem,10vw,6rem);line-height:.9;color:var(--text);font-weight:400}
+.placa span{letter-spacing:.3em;font-size:1rem}
+.poste{position:absolute;right:6%;top:8%;width:34px;height:76%;border-radius:18px;border:3px solid #6B5F52;background:repeating-linear-gradient(135deg,#8A2B1F 0 16px,#EDE6DA 16px 32px,#1F3A6B 32px 48px,#EDE6DA 48px 64px)}
+@media(max-width:600px){.poste{right:2%;width:24px}}
+.card .num{font-family:var(--font-display);font-size:2.6rem;color:var(--primary);line-height:1;margin-bottom:.5rem}
+.card h3{font-family:var(--font-display);font-size:1.7rem;font-weight:400;letter-spacing:.03em}
+td.num{color:var(--primary);font-family:var(--font-display);font-size:1.3rem;font-weight:400}
+.clube{background:linear-gradient(180deg,#1A1613,#141210)}
+.planos{margin-bottom:3.5rem;align-items:stretch}
+.economia{font-size:.88rem;color:var(--primary)!important;border-top:1px dashed var(--border-strong);padding-top:.75rem}
+.passos-clube li::before{border-radius:2px}
+.review blockquote{font-size:1.1rem}

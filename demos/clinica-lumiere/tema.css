@@ -1,0 +1,28 @@
+/* Clínica Lumière · clean, branco e verde-sálvia */
+:root{
+  --bg:#FFFFFF;--surface:#F1F5F0;--card:#FFFFFF;--card-alt:#FFFFFF;
+  --text:#1F2A22;--muted:#5A685D;--border:#E1E8DF;--border-strong:#C3D0C1;
+  --primary:#4F6B55;--primary-hover:#3E5643;--on-primary:#FFFFFF;--accent:#A9BFA8;
+  --eyebrow:#4F6B55;--price:#4F6B55;--stars:#A3884B;
+  --font-display:"Marcellus",Georgia,serif;--font-body:"DM Sans",system-ui,sans-serif;
+  --display-weight:400;--display-tracking:0;
+  --radius:20px;--radius-sm:12px;--radius-btn:999px;
+  --header-bg:rgba(255,255,255,.92);--header-solid:#fff;--demo-bg:#1F2A22;--demo-text:#DCE6DA;
+  --footer-bg:#1F2A22;--footer-text:#DCE6DA;--map-bg:#E6EDE4;--opt-on:#F1F5F0;
+  --avatar-bg:#DCE6DA;--avatar-text:#4F6B55;--tag-bg:#E6EDE4;--tag-text:#3E5643;
+}
+.hero-art{min-height:360px}
+.circulo{position:absolute;right:10%;top:6%;width:66%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#DCE6DA 55%,#A9BFA8)}
+.folha{position:absolute;background:#4F6B55;border-radius:0 100% 0 100%}
+.f1{width:34%;aspect-ratio:1;right:2%;top:56%;transform:rotate(12deg);opacity:.85}
+.f2{width:22%;aspect-ratio:1;right:62%;top:4%;background:#A9BFA8;transform:rotate(-30deg)}
+.cartao{position:absolute;left:0;bottom:6%;background:#fff;border:1px solid var(--border);border-radius:16px;padding:1rem 1.25rem;display:grid;box-shadow:0 16px 40px rgba(31,42,34,.12)}
+.cartao small{color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
+.cartao strong{font-family:var(--font-display);font-size:1.4rem;font-weight:400}
+.cartao span{color:var(--muted);font-size:.88rem}
+.resultado{border-radius:16px;background:var(--surface);padding:1.5rem;border:1px solid var(--accent);outline:none}
+.resultado h3{font-family:var(--font-display);font-size:1.6rem;font-weight:400}
+.resultado p{color:var(--muted)}
+.retrato{aspect-ratio:4/5;max-width:420px;border-radius:200px 200px 20px 20px;background:linear-gradient(160deg,#DCE6DA,#A9BFA8 60%,#4F6B55);display:grid;place-items:center}
+.retrato span{font-family:var(--font-display);font-size:5rem;color:#fff}
+@media(max-width:899px){.retrato{max-width:280px}}

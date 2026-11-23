@@ -1,0 +1,27 @@
+/* Forno da Vila · quente, rústico, vermelho e creme */
+:root{
+  --bg:#FBF3E4;--surface:#F4E6CC;--card:#FFFAF0;--card-alt:#FFFAF0;
+  --text:#3A1F14;--muted:#6E4E3E;--border:#E6D2B0;--border-strong:#C9AE86;
+  --primary:#B3261E;--primary-hover:#951C15;--on-primary:#FFF8EC;--accent:#E0A43A;
+  --eyebrow:#B3261E;--price:#B3261E;--stars:#D08A1C;
+  --font-display:"Fraunces",Georgia,serif;--font-body:"Nunito Sans",system-ui,sans-serif;
+  --display-weight:800;--display-tracking:-.02em;
+  --radius:14px;--radius-sm:10px;--radius-btn:999px;
+  --header-bg:rgba(251,243,228,.94);--header-solid:#FBF3E4;--demo-bg:#3A1F14;--demo-text:#F4E6CC;
+  --footer-bg:#3A1F14;--footer-text:#F4E6CC;--tag-bg:#F4E1C0;--tag-text:#7A3A1C;
+}
+body{background-image:radial-gradient(rgba(58,31,20,.05) 1px,transparent 1px);background-size:18px 18px}
+.brand span{font-style:italic;color:var(--accent)}
+.hero-art{min-height:340px;display:grid;place-items:center}
+.pizza{width:min(360px,80vw);aspect-ratio:1;border-radius:50%;position:relative;background:radial-gradient(circle,#E9572B 0 52%,#F2C46D 53% 60%,#C9843A 61% 68%,#9E5A24 69% 70%,transparent 71%);box-shadow:0 30px 60px rgba(58,31,20,.25)}
+.pizza i{position:absolute;width:15%;aspect-ratio:1;border-radius:50%;background:#FFF3DC;box-shadow:inset -3px -3px 0 rgba(0,0,0,.06)}
+.pizza i:nth-child(1){left:30%;top:28%}.pizza i:nth-child(2){left:55%;top:24%;background:#3E7B2E;width:10%;border-radius:50% 0}.pizza i:nth-child(3){left:58%;top:52%}
+.pizza i:nth-child(4){left:30%;top:56%;background:#3E7B2E;width:9%;border-radius:0 50%}.pizza i:nth-child(5){left:44%;top:40%;width:12%}
+.pizza i:nth-child(6){left:40%;top:68%;width:8%;background:#7A1C12}.pizza i:nth-child(7){left:68%;top:38%;width:8%;background:#7A1C12}
+.selo-forno{position:absolute;right:4%;top:6%;width:104px;height:104px;border-radius:50%;background:var(--text);color:var(--bg);display:grid;place-items:center;text-align:center;font-family:var(--font-display);font-weight:800;line-height:1.05;transform:rotate(-12deg);border:3px dashed var(--accent)}
+.item h3{font-size:1.25rem}
+.tag-cat{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#7A3A1C;background:var(--tag-bg);padding:.15rem .55rem;border-radius:99px}
+.item .price{font-size:1.45rem;margin:0}
+.btn-sm{min-height:44px;padding:.5rem 1.1rem}
+.horarios{grid-template-columns:1fr 1fr}
+.horarios div{border-left:3px solid var(--primary);padding-left:.8rem}

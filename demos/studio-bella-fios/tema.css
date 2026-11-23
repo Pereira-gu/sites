@@ -1,0 +1,24 @@
+/* Studio Bella Fios · elegante, nude e dourado */
+:root{
+  --bg:#FBF6F1;--surface:#F3E8DE;--card:#FFFDFB;--card-alt:#FFFDFB;
+  --text:#2B211C;--muted:#6E5E55;--border:#E6D8CB;--border-strong:#CDB9A7;
+  --primary:#8C6A35;--primary-hover:#74572A;--on-primary:#FFFDF8;--accent:#D8B98A;
+  --eyebrow:#8C6A35;--price:#2B211C;--stars:#B08A47;
+  --font-display:"Cormorant Garamond",Georgia,serif;--font-body:"Jost",system-ui,sans-serif;
+  --display-weight:600;--display-tracking:-.005em;--h1-max:4.6rem;
+  --radius:4px;--radius-sm:4px;--radius-btn:999px;
+  --header-bg:rgba(251,246,241,.92);--demo-bg:#2B211C;--demo-text:#F3E8DE;
+  --footer-bg:#2B211C;--footer-text:#F3E8DE;--map-bg:#E9DDD0;
+  --avatar-bg:#E9D9C4;--avatar-text:#5C4423;--tag-bg:#EFE2D3;
+}
+h1,h2{font-style:italic}
+.brand{font-size:1.6rem;font-style:italic}
+.hero{background:radial-gradient(60% 80% at 85% 30%,#F1DEC8 0,transparent 70%)}
+.hero-art{min-height:300px}
+@media(min-width:900px){.hero-art{min-height:380px}}
+.arco{position:absolute;right:8%;top:0;width:62%;height:100%;border-radius:999px 999px 6px 6px;background:linear-gradient(170deg,#E9CFAE,#B88F57 60%,#8C6A35)}
+.arco-2{right:52%;top:18%;width:34%;height:70%;background:linear-gradient(170deg,#F6E9DA,#DCC2A2);border:1px solid #CDB9A7}
+.bolha{position:absolute;left:2%;bottom:6%;background:#FFFDFB;border:1px solid var(--border);padding:1rem 1.25rem;border-radius:4px;box-shadow:0 14px 30px rgba(92,68,35,.16);display:grid;gap:.15rem}
+.bolha small{color:var(--muted)}.bolha strong{font-family:var(--font-display);font-size:1.5rem;font-style:italic}
+.card{border-top:3px solid var(--accent)}
+.price{font-style:italic}

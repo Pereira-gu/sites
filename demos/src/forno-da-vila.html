@@ -1,0 +1,103 @@
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Pizzaria a lenha · Cidade Baixa, POA</span>
+      <h1>Massa de 48 horas, forno a lenha e borda que estala</h1>
+      <p class="lead">Fermentação natural, tomate pelado italiano e muçarela de búfala. Pra comer aqui na Vila ou chegar quentinha na sua casa.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contato" data-wa="Oi! Quero fazer um pedido no Forno da Vila.">Pedir pelo WhatsApp</a>
+        <a class="btn btn-ghost" href="#cardapio">Ver cardápio</a>
+      </div>
+      <ul class="hero-facts">
+        <li><strong>Ter a dom</strong>a partir das 18h</li>
+        <li><strong>40–55 min</strong>tempo médio de entrega</li>
+        <li><strong>Opções veganas</strong>com queijo de castanha</li>
+      </ul>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="pizza"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="selo-forno">forno<br>a lenha</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="cardapio">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Cardápio</span><h2>Escolha sua pizza</h2><p>Filtre por categoria. Broto tem 4 fatias e grande tem 8. <span class="ficticio">preços fictícios</span></p></div>
+    <div class="chips" data-filter="#pizzas" data-one="pizza" data-many="pizzas" aria-label="Filtrar cardápio">
+      <button class="chip" data-value="todos" aria-pressed="true">Todas</button>
+      <button class="chip" data-value="tradicional" aria-pressed="false">Tradicionais</button>
+      <button class="chip" data-value="especial" aria-pressed="false">Especiais</button>
+      <button class="chip" data-value="vegana" aria-pressed="false">Veganas</button>
+      <button class="chip" data-value="doce" aria-pressed="false">Doces</button>
+    </div>
+    <p class="filter-status" aria-live="polite"></p>
+    <div class="grid menu-grid" id="pizzas" style="--min:280px">
+      <article class="card item" data-cat="tradicional"><div class="meta"><h3>Margherita</h3><span class="tag-cat">Tradicional</span></div><p>Molho de tomate pelado, muçarela de búfala, manjericão fresco e azeite.</p><div class="meta push"><span class="price">R$ 62 <small>grande · broto R$ 39</small></span><a class="btn btn-primary btn-sm" href="#" data-wa="Quero pedir uma Margherita grande.">Pedir</a></div></article>
+      <article class="card item" data-cat="tradicional"><div class="meta"><h3>Calabresa da Vila</h3><span class="tag-cat">Tradicional</span></div><p>Calabresa artesanal, cebola roxa, azeitona preta e orégano.</p><div class="meta push"><span class="price">R$ 58 <small>grande · broto R$ 36</small></span><a class="btn btn-primary btn-sm" href="#" data-wa="Quero pedir uma Calabresa da Vila grande.">Pedir</a></div></article>
+      <article class="card item" data-cat="tradicional"><div class="meta"><h3>Portuguesa</h3><span class="tag-cat">Tradicional</span></div><p>Presunto, ovo, cebola, ervilha fresca, azeitona e muçarela.</p><div class="meta push"><span class="price">R$ 64 <small>grande · broto R$ 40</small></span><a class="btn btn-primary btn-sm" href="#" data-wa="Quero pedir uma Portuguesa grande.">Pedir</a></div></article>
+      <article class="card item" data-cat="tradicional"><div class="meta"><h3>Quatro queijos</h3><span class="tag-cat">Tradicional</span></div><p>Muçarela, gorgonzola, provolone defumado e parmesão.</p><div class="meta push"><span class="price">R$ 68 <small>grande · broto R$ 42</small></span><a class="btn btn-primary btn-sm" href="#" data-wa="Quero pedir uma Quatro queijos grande.">Pedir</a></div></article>
+      <article class="card item" data-cat="especial"><div class="meta"><h3>Parma e rúcula</h3><span class="tag-cat">Especial</span></div><p>Presunto parma, rúcula, tomate-cereja confitado e lascas de parmesão.</p><div class="meta push"><span class="price">R$ 79 <small>grande · broto R$ 49</small></span><a class="btn btn-primary btn-sm" href="#" data-wa="Quero pedir uma Parma e rúcula grande.">Pedir</a></div></article>
+      <article class="card item" data-cat="especial"><div class="meta"><h3>Costela no fogo</h3><span class="tag-cat">Especial</span></div><p>Costela desfiada cozida por 8 horas, cebola caramelizada e catupiry.</p><div class="meta push"><span class="price">R$ 82 <small>grande · broto R$ 51</small></span><a class="btn btn-primary btn-sm" href="#" data-wa="Quero pedir uma Costela no fogo grande.">Pedir</a></div></article>
+      <article class="card item" data-cat="especial"><div class="meta"><h3>Funghi trufado</h3><span class="tag-cat">Especial</span></div><p>Mix de cogumelos, muçarela, creme de leite fresco e azeite trufado.</p><div class="meta push"><span class="price">R$ 84 <small>grande · broto R$ 52</small></span><a class="btn btn-primary btn-sm" href="#" data-wa="Quero pedir uma Funghi trufado grande.">Pedir</a></div></article>
+      <article class="card item" data-cat="vegana"><div class="meta"><h3>Horta assada</h3><span class="tag-cat">Vegana</span></div><p>Abobrinha, berinjela, pimentão assado, queijo de castanha e pesto.</p><div class="meta push"><span class="price">R$ 66 <small>grande · broto R$ 41</small></span><a class="btn btn-primary btn-sm" href="#" data-wa="Quero pedir uma Horta assada grande.">Pedir</a></div></article>
+      <article class="card item" data-cat="vegana tradicional"><div class="meta"><h3>Marinara</h3><span class="tag-cat">Vegana</span></div><p>A clássica napolitana: tomate, alho, orégano e azeite. Sem queijo.</p><div class="meta push"><span class="price">R$ 48 <small>grande · broto R$ 30</small></span><a class="btn btn-primary btn-sm" href="#" data-wa="Quero pedir uma Marinara grande.">Pedir</a></div></article>
+      <article class="card item" data-cat="doce"><div class="meta"><h3>Banana com canela</h3><span class="tag-cat">Doce</span></div><p>Banana, açúcar mascavo, canela e muçarela. Vai bem depois de uma salgada.</p><div class="meta push"><span class="price">R$ 46 <small>grande · broto R$ 29</small></span><a class="btn btn-primary btn-sm" href="#" data-wa="Quero pedir uma Banana com canela.">Pedir</a></div></article>
+      <article class="card item" data-cat="doce"><div class="meta"><h3>Nutella e morango</h3><span class="tag-cat">Doce</span></div><p>Creme de avelã, morangos frescos e açúcar de confeiteiro.</p><div class="meta push"><span class="price">R$ 58 <small>grande · broto R$ 36</small></span><a class="btn btn-primary btn-sm" href="#" data-wa="Quero pedir uma Nutella e morango.">Pedir</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="combos">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Combos</span><h2>Pra dividir sem pensar muito</h2><p><span class="ficticio">valores fictícios</span></p></div>
+    <div class="grid">
+      <article class="card"><h3>Casal</h3><p>1 pizza grande tradicional + 1 broto doce + 1 refrigerante 1 L.</p><p class="price push">R$ 98</p><a class="btn btn-ghost" href="#" data-wa="Quero o Combo Casal do Forno da Vila.">Pedir combo</a></article>
+      <article class="card destaque"><span class="selo">Mais pedido</span><h3>Família</h3><p>2 pizzas grandes (1 especial) + 1 broto doce + 2 refrigerantes 1 L.</p><p class="price push">R$ 189</p><a class="btn btn-primary" href="#" data-wa="Quero o Combo Família do Forno da Vila.">Pedir combo</a></article>
+      <article class="card"><h3>Galera</h3><p>4 pizzas grandes à escolha + 2 refrigerantes 2 L. Ideal para 8 pessoas.</p><p class="price push">R$ 299</p><a class="btn btn-ghost" href="#" data-wa="Quero o Combo Galera do Forno da Vila.">Pedir combo</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="delivery">
+  <div class="container split">
+    <div class="sec-head">
+      <span class="eyebrow">Delivery</span><h2>Chega quente na sua porta</h2>
+      <p>Embalagem com respiro para a borda não amolecer. Pagamento no Pix ou cartão na entrega.</p>
+    </div>
+    <div class="table-wrap">
+      <table><caption class="sr-only">Taxas de entrega por bairro</caption>
+        <thead><tr><th>Bairros</th><th>Tempo</th><th>Taxa</th></tr></thead>
+        <tbody>
+          <tr><td>Cidade Baixa, Centro Histórico, Bom Fim</td><td>40 min</td><td class="num">R$ 6</td></tr>
+          <tr><td>Menino Deus, Farroupilha, Santana</td><td>45 min</td><td class="num">R$ 8</td></tr>
+          <tr><td>Azenha, Petrópolis, Rio Branco</td><td>50 min</td><td class="num">R$ 10</td></tr>
+          <tr><td>Moinhos de Vento, Mont'Serrat</td><td>55 min</td><td class="num">R$ 12</td></tr>
+        </tbody>
+      </table>
+      <p class="note" style="padding:0 1rem">Bairros e taxas de exemplo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="horarios">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">Horários</span><h2>Forno aceso de terça a domingo</h2>
+      <dl class="info horarios">
+        <div><dt>Terça a quinta</dt><dd>18h às 23h</dd></div>
+        <div><dt>Sexta e sábado</dt><dd>18h à meia-noite</dd></div>
+        <div><dt>Domingo</dt><dd>18h às 23h</dd></div>
+        <div><dt>Segunda</dt><dd>Fechado (o forno também descansa)</dd></div>
+      </dl>
+    </div>
+    <div id="contato" class="panel">
+      <h3>Rua da República, 518 · Cidade Baixa</h3>
+      <p class="note">Endereço fictício · Porto Alegre/RS</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#" data-wa="Oi! Quero fazer um pedido no Forno da Vila.">Pedir pelo WhatsApp</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Cidade%20Baixa%2C%20Porto%20Alegre" target="_blank" rel="noopener">Abrir no mapa</a>
+      </div>
+    </div>
+  </div>
+</section>
