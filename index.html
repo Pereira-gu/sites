@@ -3,22 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Sites profissionais para negócios locais | Gustavo Pereira · Sites</title>
-  <meta name="description" content="Sua loja precisa de um site? Vitrine, catálogo, agendamento e painel para negócios locais. Veja planos e valores e chame no WhatsApp.">
+  <title>Sites para barbearias, salões, buffets e lojas | Gustavo Pereira · Sites</title>
+  <meta name="description" content="Sites para barbearias, salões, buffets e lojas, com WhatsApp e agendamento online. Atendo todo o Brasil, 100% online. Me chama no direct e peça um orçamento sem compromisso.">
   <meta name="theme-color" content="#FF5A1F">
+  <link rel="canonical" href="https://pereira-gu.github.io/sites/">
 
   <!-- Compartilhamento (WhatsApp, Instagram, Facebook) -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Gustavo Pereira · Sites">
-  <meta property="og:title" content="Sua loja precisa de um site?">
-  <meta property="og:description" content="Sites profissionais para negócios locais. Veja planos e valores e chame no WhatsApp.">
+  <meta property="og:title" content="Site pro seu negócio">
+  <meta property="og:description" content="Sites para barbearias, salões, buffets e lojas. Atendo todo o Brasil, 100% online. Orçamento sem compromisso.">
   <!-- O WhatsApp só mostra a imagem com o endereço completo. Se mudar o domínio, troque aqui e no og:url. -->
   <meta property="og:url" content="https://pereira-gu.github.io/sites/">
   <meta property="og:image" content="https://pereira-gu.github.io/sites/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Sua loja precisa de um site? Etiqueta de preço sobre fundo laranja.">
+  <meta property="og:image:alt" content="Site pro seu negócio. Celular mostrando o site de uma barbearia de demonstração, sobre fundo laranja.">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
@@ -28,205 +30,423 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&display=swap">
 
   <link rel="stylesheet" href="style.css">
+  <!-- Movimento e 3D: arquivos à parte. Apagar estas 2 linhas deixa o site inteiro funcionando, só sem movimento. -->
+  <link rel="stylesheet" href="motion.css">
   <script>document.documentElement.classList.add('js')</script>
   <script src="script.js" defer></script>
+  <script src="motion.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Gustavo Pereira · Sites",
+    "description": "Criação de sites para barbearias, salões, buffets e lojas. Atendimento online para todo o Brasil.",
+    "url": "https://pereira-gu.github.io/sites/",
+    "areaServed": { "@type": "Country", "name": "Brasil" },
+    "sameAs": ["https://www.instagram.com/dev.gustavop/"]
+  }
+  </script>
 </head>
 <body>
-  <!-- Ícone do WhatsApp, reaproveitado em todos os botões -->
+  <!-- Ícones reaproveitados nos botões -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+    <symbol id="i-dm" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/></g><circle cx="17.3" cy="6.7" r="1.4" fill="currentColor"/></symbol>
   </svg>
 
   <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
   <!-- 1. TOPO -->
-  <header class="topo">
-    <div class="caixa topo__caixa">
-      <p class="marca" data-texto="marca">Gustavo Pereira · Sites</p>
-
-      <div class="topo__titulo">
-        <h1>
-          <span class="linha"><span>Sua loja </span></span>
-          <span class="linha"><span>precisa </span></span>
-          <span class="linha"><span>de um </span></span>
-          <span class="linha"><span>site?</span></span>
-        </h1>
-
-        <!-- A etiqueta pega o menor preço automaticamente (script.js) -->
-        <div class="etiqueta-solta">
-          <span class="etiqueta-solta__fio" aria-hidden="true"></span>
-          <p class="etiqueta-solta__corpo">
-            <span class="etiqueta-solta__furo" aria-hidden="true"></span>
-            <small>a partir de</small>
-            <strong>R$&nbsp;<span data-menor-preco></span></strong>
-          </p>
-        </div>
-      </div>
-
-      <p class="topo__sub">Sites profissionais para negócios locais</p>
-
-      <div class="topo__botoes">
-        <a class="btn btn--tinta" data-wa href="#">
-          <svg class="btn__ico" aria-hidden="true"><use href="#i-wa"/></svg>
-          Chamar no WhatsApp
-        </a>
-        <a class="btn btn--contorno" href="#planos">Ver planos</a>
-      </div>
-    </div>
-
-    <div class="faixa" aria-hidden="true">
-      <div class="faixa__trilho">
-        <span>Vitrine</span><span>Catálogo</span><span>Agendamento</span><span>Painel</span>
-        <span>Vitrine</span><span>Catálogo</span><span>Agendamento</span><span>Painel</span>
-        <span>Vitrine</span><span>Catálogo</span><span>Agendamento</span><span>Painel</span>
-        <span>Vitrine</span><span>Catálogo</span><span>Agendamento</span><span>Painel</span>
-      </div>
+  <header class="barra">
+    <div class="caixa barra__caixa">
+      <a class="marca" href="#conteudo" data-texto="marca">Gustavo Pereira · Sites</a>
+      <nav class="barra__links" aria-label="Seções">
+        <a href="#antes-depois">Antes e depois</a>
+        <a href="#tipos">Tipos de site</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#perguntas">Perguntas</a>
+      </nav>
+      <a class="btn btn--tinta btn--curto" data-direct href="https://www.instagram.com/dev.gustavop/" target="_blank" rel="noopener">
+        <svg class="btn__ico" aria-hidden="true"><use href="#i-dm"/></svg>
+        <span>Me chama no direct</span>
+      </a>
     </div>
   </header>
 
   <main id="conteudo">
-    <noscript>
-      <p class="sem-js">Para ver os planos e valores, chame no <a href="https://wa.me/5511915072940">WhatsApp</a>.</p>
-    </noscript>
+    <section class="heroi" aria-labelledby="t-heroi">
+      <div class="caixa heroi__grade">
+        <div class="heroi__texto">
+          <h1 id="t-heroi">
+            <span class="linha"><span>Site pro</span></span>
+            <span class="linha"><span>seu negócio</span></span>
+          </h1>
+          <p class="heroi__sub">Sites para barbearias, salões, buffets e lojas. Atendo todo o Brasil, 100% online.</p>
+          <div class="botoes">
+            <a class="btn btn--tinta" data-direct href="https://www.instagram.com/dev.gustavop/" target="_blank" rel="noopener">
+              <svg class="btn__ico" aria-hidden="true"><use href="#i-dm"/></svg>
+              Me chama no direct
+            </a>
+            <a class="btn btn--contorno" data-wa href="https://wa.me/5511915072940?text=Oi%2C%20Gustavo!%20Vi%20seu%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+              <svg class="btn__ico" aria-hidden="true"><use href="#i-wa"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
 
-    <!-- 2. TIPOS DE SITE -->
-    <section class="secao secao--branca" aria-labelledby="t-tipos">
-      <div class="caixa">
-        <h2 class="titulo reveal" id="t-tipos">Qual site combina com sua loja?</h2>
-
-        <ul class="tipos">
-          <li class="tipo tipo--vitrine reveal">
-            <svg class="tipo__ico" viewBox="0 0 48 48" aria-hidden="true">
-              <path class="traco" pathLength="1" d="M6 20 10 7h28l4 13"/>
-              <path class="traco" pathLength="1" d="M6 20a6 6 0 0 0 12 0 6 6 0 0 0 12 0 6 6 0 0 0 12 0"/>
-              <path class="traco" pathLength="1" d="M10 26v15h28V26"/>
-              <path class="traco" pathLength="1" d="M20 41V31h8v10"/>
-            </svg>
-            <h3>Vitrine</h3>
-            <p>Apresenta sua loja e mostra onde te achar.</p>
-          </li>
-          <li class="tipo tipo--catalogo reveal">
-            <svg class="tipo__ico" viewBox="0 0 48 48" aria-hidden="true">
-              <path class="traco" pathLength="1" d="M25 6h17v17L23 42 6 25 25 6Z"/>
-              <circle class="traco" pathLength="1" cx="34" cy="14" r="3"/>
-            </svg>
-            <h3>Catálogo de produtos</h3>
-            <p>Produtos com foto e preço, prontos para pedir.</p>
-          </li>
-          <li class="tipo tipo--agenda reveal">
-            <svg class="tipo__ico" viewBox="0 0 48 48" aria-hidden="true">
-              <rect class="traco" pathLength="1" x="7" y="10" width="34" height="31" rx="3"/>
-              <path class="traco" pathLength="1" d="M7 19h34M16 5v9M32 5v9"/>
-              <path class="traco" pathLength="1" d="m17 30 5 5 9-10"/>
-            </svg>
-            <h3>Agendamento online</h3>
-            <p>O cliente marca o horário sozinho.</p>
-          </li>
-          <li class="tipo tipo--painel reveal">
-            <svg class="tipo__ico" viewBox="0 0 48 48" aria-hidden="true">
-              <rect class="traco" pathLength="1" x="6" y="8" width="36" height="32" rx="3"/>
-              <path class="traco" pathLength="1" d="M15 32v-8M24 32V16M33 32v-12"/>
-            </svg>
-            <h3>Painel para o dono</h3>
-            <p>Pedidos e clientes organizados em um só lugar.</p>
-          </li>
-        </ul>
+        <!-- Celular: sem script é uma imagem inclinada; o motion.js liga o 3D depois que a página carrega -->
+        <figure class="celular" data-celular>
+          <div class="celular__palco">
+            <div class="celular__corpo">
+              <img class="celular__tela" src="assets/tela-fio-reto.webp" width="600" height="1298" decoding="async" fetchpriority="low"
+                alt="Celular mostrando o topo do site da barbearia fictícia Fio Reto: nome, a frase Seu corte em dia, sem fila e sem espera, e o botão Agendar horário.">
+            </div>
+          </div>
+          <figcaption>Fio Reto, barbearia fictícia. Projeto de demonstração.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- 3. PLANOS: os valores ficam no topo do script.js -->
-    <section class="secao secao--tinta" id="planos" aria-labelledby="t-planos">
+    <!-- 2. QUAL É O SEU NEGÓCIO (os textos de cada negócio ficam no script.js) -->
+    <section class="negocio" id="negocio" data-negocio-campo="barbearia" aria-labelledby="t-negocio">
       <div class="caixa">
-        <h2 class="titulo reveal" id="t-planos">Planos e valores</h2>
-        <p class="apoio reveal">Escolha pelo que sua loja precisa hoje.</p>
+        <h2 class="titulo reveal" id="t-negocio">Site pra sua <span data-negocio-palavra>barbearia</span></h2>
+        <p class="apoio reveal">Toque no seu ramo e veja o que o site mostra.</p>
 
-        <div class="planos" data-planos></div>
-        <div data-manutencao></div>
-        <div data-oferta></div>
-        <ul class="letras-miudas reveal" data-condicoes></ul>
+        <div class="seletor reveal" role="radiogroup" aria-labelledby="t-negocio" data-ui>
+          <button type="button" role="radio" aria-checked="true" data-negocio="barbearia">Barbearia</button>
+          <button type="button" role="radio" aria-checked="false" data-negocio="salao">Salão</button>
+          <button type="button" role="radio" aria-checked="false" data-negocio="buffet">Buffet</button>
+          <button type="button" role="radio" aria-checked="false" data-negocio="loja">Loja</button>
+        </div>
+
+        <div class="negocio__resultado reveal" aria-live="polite">
+          <ul class="negocio__lista" data-negocio-lista>
+            <li>Serviços e preços à vista</li>
+            <li>Botão de agendar horário</li>
+            <li>WhatsApp com mensagem pronta</li>
+          </ul>
+          <p class="negocio__exemplo" data-negocio-exemplo>
+            <a class="link-seta" href="https://pereira-gu.github.io/barbearia-demo" target="_blank" rel="noopener">Ver o exemplo da Fio Reto (demonstração)</a>
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- 4. COMO FUNCIONA -->
-    <section class="secao secao--branca" aria-labelledby="t-como">
-      <div class="caixa">
-        <h2 class="titulo reveal" id="t-como">Como funciona</h2>
+    <!-- 3. ANTES E DEPOIS -->
+    <section class="antes-depois" id="antes-depois" aria-labelledby="t-ad">
+      <div class="caixa antes-depois__grade">
+        <div class="antes-depois__texto">
+          <h2 class="titulo reveal" id="t-ad">Antes e depois</h2>
+          <p class="apoio reveal">A mesma barbearia, só com Instagram e depois com site. Arraste a barra no meio da tela.</p>
+          <ul class="antes-depois__pontos reveal">
+            <li><strong>Antes:</strong> preço numa arte do feed, "me chama no direct pra saber o valor" e nenhum agendamento.</li>
+            <li><strong>Depois:</strong> serviços e preços à vista, botão de agendar e WhatsApp com a mensagem pronta.</li>
+          </ul>
+          <p class="aviso reveal"><strong>Exemplo fictício para demonstração.</strong> Os preços que aparecem são da barbearia fictícia Fio Reto, não do meu serviço.</p>
+        </div>
 
-        <ol class="passos">
-          <li class="passo reveal"><span class="passo__n" aria-hidden="true">1</span><div><h3>Conversa pelo WhatsApp</h3><p>Você me conta da loja e do que precisa.</p></div></li>
-          <li class="passo reveal"><span class="passo__n" aria-hidden="true">2</span><div><h3>Proposta</h3><p>Envio o plano certo para o seu caso e o valor.</p></div></li>
-          <li class="passo reveal"><span class="passo__n" aria-hidden="true">3</span><div><h3>Protótipo para aprovar</h3><p>Você vê como vai ficar e pede os ajustes.</p></div></li>
-          <li class="passo reveal"><span class="passo__n" aria-hidden="true">4</span><div><h3>Publicação</h3><p>Site no ar, pronto para divulgar.</p></div></li>
-        </ol>
+        <div class="comparar reveal" data-comparar style="--pos: 50%">
+          <div class="comparar__moldura" data-ui>
+            <!-- ANTES: perfil numa rede social -->
+            <div class="tela tela--antes" role="img" aria-label="Antes: perfil da barbearia fictícia numa rede social. A tabela de preços está numa arte do feed, a bio diz me chama no direct pra saber o valor e não há agendamento.">
+              <p class="ig__usuario">fioreto.barbearia</p>
+              <div class="ig__perfil">
+                <span class="ig__avatar">FR</span>
+                <div>
+                  <p class="ig__nome">Fio Reto Barbearia</p>
+                  <p class="ig__bio">Corte e barba.<br>Valores? Me chama no direct</p>
+                </div>
+              </div>
+              <div class="ig__botoes"><span>Seguir</span><span>Mensagem</span></div>
+              <div class="ig__feed">
+                <span class="ig__post ig__post--tabela"><b>Tabela de preços</b><i>corte · barba · combo</i></span>
+                <span class="ig__post ig__post--a"></span>
+                <span class="ig__post ig__post--b"><b>Agenda cheia</b></span>
+                <span class="ig__post ig__post--b"></span>
+                <span class="ig__post ig__post--promo"><b>Promo</b><i>chama no direct</i></span>
+                <span class="ig__post ig__post--a"></span>
+              </div>
+              <div class="ig__comentarios">
+                <p><b>cliente</b> quanto é o corte?</p>
+                <p><b>fioreto.barbearia</b> me chama no direct pra saber o valor</p>
+              </div>
+              <p class="ig__sem">Sem agendamento</p>
+            </div>
+
+            <!-- DEPOIS: site da barbearia -->
+            <div class="tela tela--depois" role="img" aria-label="Depois: site da barbearia fictícia Fio Reto com serviços e preços à vista (corte 55 reais, barba 40, corte e barba 85, sobrancelha 20), botão Agendar horário e botão de WhatsApp com mensagem pronta.">
+              <p class="fr__marca">Fio Reto</p>
+              <p class="fr__titulo">Serviços e preços</p>
+              <ul class="fr__lista">
+                <li><span>Corte</span><span>R$ 55</span></li>
+                <li><span>Barba</span><span>R$ 40</span></li>
+                <li><span>Corte e barba</span><span>R$ 85</span></li>
+                <li><span>Sobrancelha</span><span>R$ 20</span></li>
+              </ul>
+              <p class="fr__selo">Preços fictícios</p>
+              <span class="fr__agendar">Agendar horário</span>
+              <span class="fr__whats"><svg aria-hidden="true"><use href="#i-wa"/></svg>Oi! Quero agendar um corte.</span>
+              <p class="fr__horario">Terça a sexta, 9h às 20h. Sábado, 9h às 18h.</p>
+            </div>
+
+            <span class="comparar__rotulo comparar__rotulo--antes" aria-hidden="true">Antes</span>
+            <span class="comparar__rotulo comparar__rotulo--depois" aria-hidden="true">Depois</span>
+            <span class="comparar__linha" aria-hidden="true"><span class="comparar__pegador"></span></span>
+            <input class="comparar__controle" type="range" min="0" max="100" value="50" step="1"
+              aria-label="Comparar antes e depois. Para a esquerda mostra mais do depois, para a direita mais do antes."
+              aria-valuetext="Metade antes, metade depois">
+          </div>
+          <p class="comparar__legenda">Exemplo fictício para demonstração.</p>
+        </div>
       </div>
     </section>
 
-    <!-- 5. PORTFÓLIO: os cases ficam no topo do script.js -->
-    <section class="secao secao--tinta" aria-labelledby="t-portfolio">
+    <!-- 4. TIPOS DE SITE -->
+    <section class="tipos" id="tipos" aria-labelledby="t-tipos">
+      <div class="caixa">
+        <h2 class="tipos__titulo reveal" id="t-tipos">Três tipos de site</h2>
+        <dl class="tipos__lista">
+          <div class="tipo reveal">
+            <dt>Essencial</dt>
+            <dd><strong>Para ser encontrado e receber mensagem.</strong> Apresentação, fotos, horário, mapa e botão de WhatsApp, numa página que abre rápido no celular.</dd>
+          </div>
+          <div class="tipo reveal">
+            <dt>Catálogo</dt>
+            <dd><strong>Para mostrar seus produtos e vender pelo WhatsApp.</strong> Catálogo com foto e preço e um botão de pedido que já abre a conversa.</dd>
+          </div>
+          <div class="tipo reveal">
+            <dt>Completo</dt>
+            <dd><strong>Para receber agendamentos e organizar o negócio.</strong> Agendamento online e um painel para o dono ver pedidos e clientes.</dd>
+          </div>
+        </dl>
+
+        <div class="valor reveal">
+          <p class="valor__frase">O valor depende do projeto. Me conta do seu negócio e eu te mando um orçamento sem compromisso.</p>
+          <a class="btn btn--tinta" href="#orcamento">Montar meu pedido de orçamento</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. VEM EM TODO SITE -->
+    <section class="incluso" aria-labelledby="t-incluso">
+      <div class="caixa">
+        <h2 class="titulo reveal" id="t-incluso">Vem em todo site</h2>
+      </div>
+      <ul class="incluso__faixa">
+        <li class="incluso__item incluso__item--a reveal"><b>Feito para o celular</b>É onde seu cliente procura.</li>
+        <li class="incluso__item incluso__item--b reveal"><b>Pronto para o Google</b>Título, descrição e endereço certo para aparecer na busca.</li>
+        <li class="incluso__item incluso__item--c reveal"><b>Cadeado de site seguro</b>Endereço com HTTPS.</li>
+        <li class="incluso__item incluso__item--d reveal"><b>Botão de WhatsApp</b>Com a mensagem já escrita.</li>
+        <li class="incluso__item incluso__item--e reveal"><b>O site é seu</b>Ajudo a registrar o domínio, que fica no seu nome.</li>
+      </ul>
+    </section>
+
+    <!-- 6. COMO FUNCIONA -->
+    <section class="como" id="como-funciona" aria-labelledby="t-como">
+      <div class="caixa">
+        <div class="como__intro">
+          <h2 class="titulo reveal" id="t-como">Como funciona</h2>
+          <p class="apoio reveal">Tudo pelo direct ou pelo WhatsApp, de qualquer cidade do Brasil. Pagamento: 50% para começar e 50% na entrega, com até 2 rodadas de ajustes.</p>
+        </div>
+
+        <div class="etapas reveal" data-etapas>
+          <div class="etapa etapa--1 aberta">
+            <h3><button type="button" aria-expanded="true" aria-controls="etapa-1">Conversa</button></h3>
+            <p class="etapa__texto" id="etapa-1">Você me chama no direct ou no WhatsApp e me conta do seu negócio: o que vende, como atende e onde seus clientes te acham hoje.</p>
+          </div>
+          <div class="etapa etapa--2">
+            <h3><button type="button" aria-expanded="false" aria-controls="etapa-2">Orçamento</button></h3>
+            <p class="etapa__texto" id="etapa-2">Eu te mando o tipo de site que faz sentido para você e o valor. Sem compromisso.</p>
+          </div>
+          <div class="etapa etapa--3">
+            <h3><button type="button" aria-expanded="false" aria-controls="etapa-3">Protótipo</button></h3>
+            <p class="etapa__texto" id="etapa-3">Com os 50% para começar, eu monto a primeira versão. Você vê no celular como vai ficar e pede os ajustes, em até 2 rodadas.</p>
+          </div>
+          <div class="etapa etapa--4">
+            <h3><button type="button" aria-expanded="false" aria-controls="etapa-4">No ar</button></h3>
+            <p class="etapa__texto" id="etapa-4">Na entrega você paga os outros 50% e o site vai para o ar, pronto para colocar na bio e divulgar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. PORTFÓLIO -->
+    <section class="portfolio" id="portfolio" aria-labelledby="t-portfolio">
       <div class="caixa">
         <h2 class="titulo reveal" id="t-portfolio">Portfólio</h2>
         <p class="apoio reveal">Sites de demonstração. Abra no celular e teste.</p>
-        <div class="portfolio" data-portfolio></div>
+      </div>
+
+      <div class="pastas">
+        <article class="pasta pasta--fio">
+          <div class="caixa">
+            <h3 class="pasta__aba">Fio Reto</h3>
+            <div class="pasta__corpo">
+              <img src="assets/fio-reto-desktop.webp" width="1200" height="750" loading="lazy" decoding="async"
+                alt="Site da barbearia fictícia Fio Reto no computador: fundo verde-escuro, nome em letras creme e botão Agendar horário.">
+              <div class="pasta__texto">
+                <p class="pasta__tipo">Barbearia fictícia</p>
+                <p>Serviços e preços à vista, agendamento pelo celular e um painel para o dono ver os horários marcados.</p>
+                <p class="aviso">Projeto de demonstração. O nome e os dados são fictícios.</p>
+                <a class="btn btn--laranja" href="https://pereira-gu.github.io/barbearia-demo" target="_blank" rel="noopener">Ver o site da Fio Reto</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pasta pasta--sopro">
+          <div class="caixa">
+            <h3 class="pasta__aba">Soprô</h3>
+            <div class="pasta__corpo">
+              <img src="assets/sopro-desktop.webp" width="1200" height="750" loading="lazy" decoding="async"
+                alt="Site do salão de festas fictício Soprô no computador: fundo amarelo, título Escolha o dia e balões coloridos.">
+              <div class="pasta__texto">
+                <p class="pasta__tipo">Salão de festas fictício</p>
+                <p>A pessoa escolhe o dia da festa, vê os pacotes e já chama no WhatsApp com a data na mensagem.</p>
+                <p class="aviso">Projeto de demonstração. O nome e os dados são fictícios.</p>
+                <a class="btn btn--tinta" href="https://pereira-gu.github.io/sopro/" target="_blank" rel="noopener">Ver o site da Soprô</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pasta pasta--proximo">
+          <div class="caixa">
+            <h3 class="pasta__aba">O próximo</h3>
+            <div class="pasta__corpo pasta__corpo--proximo">
+              <p class="pasta__frase">O próximo pode ser o seu.</p>
+              <a class="btn btn--tinta" data-direct href="https://www.instagram.com/dev.gustavop/" target="_blank" rel="noopener">
+                <svg class="btn__ico" aria-hidden="true"><use href="#i-dm"/></svg>
+                Me chama no direct
+              </a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- 6. PERGUNTAS FREQUENTES -->
-    <section class="secao secao--branca" aria-labelledby="t-faq">
+    <!-- 8. PERGUNTAS -->
+    <section class="perguntas" id="perguntas" aria-labelledby="t-perguntas">
       <div class="caixa caixa--estreita">
-        <h2 class="titulo reveal" id="t-faq">Perguntas frequentes</h2>
+        <h2 class="titulo reveal" id="t-perguntas">Perguntas</h2>
 
-        <div class="faq reveal">
-          <details name="faq">
-            <summary>Quanto tempo leva?</summary>
-            <p>Em torno de uma a duas semanas para os pacotes simples.</p>
+        <div class="fichas reveal">
+          <details class="ficha" name="faq" open>
+            <summary><span class="ficha__aba">Prazo</span><span class="ficha__pergunta">Quanto tempo leva?</span></summary>
+            <p>Em torno de uma a duas semanas para os sites mais simples. O prazo certo do seu vai junto com o orçamento.</p>
           </details>
-          <details name="faq">
-            <summary>Como é o pagamento?</summary>
-            <p>Por Pix: 50% de sinal para começar e 50% na entrega.</p>
+          <details class="ficha" name="faq">
+            <summary><span class="ficha__aba">Pagamento</span><span class="ficha__pergunta">Como é o pagamento?</span></summary>
+            <p>Por Pix: 50% para começar e 50% na entrega, com até 2 rodadas de ajustes.</p>
           </details>
-          <details name="faq">
-            <summary>O que é domínio?</summary>
-            <p>É o endereço do site na internet, como sualoja.com.br. O domínio próprio fica por conta do cliente.</p>
+          <details class="ficha" name="faq">
+            <summary><span class="ficha__aba">Cidade</span><span class="ficha__pergunta">Atende minha cidade?</span></summary>
+            <p>Sim. Atendo todo o Brasil, 100% online: a conversa é pelo direct ou pelo WhatsApp e você aprova tudo pelo celular.</p>
           </details>
-          <details name="faq">
-            <summary>O que está incluso na manutenção?</summary>
-            <p>Pequenas alterações, atualização de preços e fotos, e suporte. É opcional e custa R$&nbsp;<span data-preco-manutencao></span> por mês.</p>
+          <details class="ficha" name="faq">
+            <summary><span class="ficha__aba">Mudanças</span><span class="ficha__pergunta">Consigo trocar preço e foto depois?</span></summary>
+            <p>Sim. Você me manda pelo WhatsApp o que mudou e eu atualizo. Isso faz parte da manutenção, que é opcional.</p>
           </details>
-          <details name="faq">
-            <summary>Quem é o dono do site?</summary>
+          <details class="ficha" name="faq">
+            <summary><span class="ficha__aba">Depois</span><span class="ficha__pergunta">E depois que o site fica pronto?</span></summary>
+            <p>Se quiser, tem a manutenção: pequenas alterações, atualização de preços e fotos, e suporte. O valor vem junto com o orçamento.</p>
+          </details>
+          <details class="ficha" name="faq">
+            <summary><span class="ficha__aba">Domínio</span><span class="ficha__pergunta">O que é domínio?</span></summary>
+            <p>É o endereço do site na internet, como sualoja.com.br. O domínio próprio fica no seu nome e por sua conta, e eu te ajudo a registrar.</p>
+          </details>
+          <details class="ficha" name="faq">
+            <summary><span class="ficha__aba">Dono</span><span class="ficha__pergunta">Quem é o dono do site?</span></summary>
             <p>Você, o cliente. O site é seu.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- 7. CHAMADA FINAL -->
-    <section class="final" aria-labelledby="t-final">
+    <!-- 9. ORÇAMENTO EM 3 TOQUES -->
+    <section class="orcamento" id="orcamento" aria-labelledby="t-orcamento">
       <div class="caixa">
-        <h2 class="final__titulo reveal" id="t-final">Vamos colocar sua loja no ar?</h2>
-        <div class="final__botoes reveal">
-          <div class="final__cta">
-            <a class="btn btn--tinta" data-wa href="#">
-              <svg class="btn__ico" aria-hidden="true"><use href="#i-wa"/></svg>
-              Chamar no WhatsApp
-            </a>
-            <p class="final__confianca" data-texto="confianca"></p>
+        <h2 class="titulo reveal" id="t-orcamento">Vamos colocar seu negócio no ar?</h2>
+        <p class="apoio reveal">Três toques e a mensagem fica pronta.</p>
+
+        <form class="pedido reveal" data-pedido onsubmit="return false">
+          <fieldset>
+            <legend>Seu negócio</legend>
+            <div class="chips">
+              <label><input type="radio" name="negocio" value="barbearia" checked><span>Barbearia</span></label>
+              <label><input type="radio" name="negocio" value="salao"><span>Salão</span></label>
+              <label><input type="radio" name="negocio" value="buffet"><span>Buffet</span></label>
+              <label><input type="radio" name="negocio" value="loja"><span>Loja</span></label>
+              <label><input type="radio" name="negocio" value="outro"><span>Outro</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Já tem Instagram?</legend>
+            <div class="chips">
+              <label><input type="radio" name="insta" value="sim" checked><span>Sim</span></label>
+              <label><input type="radio" name="insta" value="nao"><span>Não</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Precisa de agendamento online?</legend>
+            <div class="chips">
+              <label><input type="radio" name="agenda" value="sim" checked><span>Sim</span></label>
+              <label><input type="radio" name="agenda" value="nao"><span>Não</span></label>
+              <label><input type="radio" name="agenda" value="nao-sei"><span>Não sei</span></label>
+            </div>
+          </fieldset>
+
+          <div class="pedido__mensagem">
+            <p class="pedido__rotulo" id="rotulo-msg">Sua mensagem</p>
+            <p class="pedido__texto" data-pedido-texto aria-labelledby="rotulo-msg" aria-live="polite">Oi, Gustavo! Tenho uma barbearia, já tenho Instagram e preciso de agendamento online. Quero um orçamento.</p>
           </div>
-          <a class="link-insta" data-insta href="#"></a>
-        </div>
+
+          <div class="pedido__botoes">
+            <a class="btn btn--laranja" data-direct data-copiar href="https://www.instagram.com/dev.gustavop/" target="_blank" rel="noopener">
+              <svg class="btn__ico" aria-hidden="true"><use href="#i-dm"/></svg>
+              Me chama no direct
+            </a>
+            <a class="btn btn--branco" data-wa data-wa-pedido href="https://wa.me/5511915072940?text=Oi%2C%20Gustavo!%20Vi%20seu%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+              <svg class="btn__ico" aria-hidden="true"><use href="#i-wa"/></svg>
+              Mandar no WhatsApp
+            </a>
+          </div>
+          <p class="pedido__nota" data-copiar-nota>No direct, a mensagem vai copiada: é só colar. Orçamento sem compromisso.</p>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="rodape">
-    <div class="caixa rodape__caixa">
-      <p><span data-texto="marca">Gustavo Pereira · Sites</span> · <span data-ano></span></p>
+    <figure class="rodape__foto">
+      <img src="assets/fio-reto-desktop.webp" width="1200" height="750" loading="lazy" decoding="async"
+        alt="Detalhe do site da barbearia fictícia Fio Reto, projeto de demonstração.">
+    </figure>
+    <div class="rodape__menu">
+      <p class="rodape__marca" data-texto="marca">Gustavo Pereira · Sites</p>
+      <nav aria-label="Rodapé">
+        <ul class="rodape__links">
+          <li><a href="#negocio">Seu negócio</a></li>
+          <li><a href="#antes-depois">Antes e depois</a></li>
+          <li><a href="#tipos">Tipos de site</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#orcamento">Orçamento</a></li>
+        </ul>
+      </nav>
+      <div class="rodape__contato">
+        <p><a data-direct href="https://www.instagram.com/dev.gustavop/" target="_blank" rel="noopener">Instagram @dev.gustavop</a></p>
+        <p><a data-wa href="https://wa.me/5511915072940?text=Oi%2C%20Gustavo!%20Vi%20seu%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">WhatsApp</a></p>
+      </div>
+      <p class="rodape__legal">Atendo todo o Brasil, 100% online · <span data-ano>2026</span></p>
     </div>
   </footer>
 
   <!-- Botão flutuante -->
-  <a class="flutuante" data-wa href="#" aria-label="Chamar no WhatsApp">
-    <svg aria-hidden="true"><use href="#i-wa"/></svg>
+  <a class="flutuante" data-direct href="https://www.instagram.com/dev.gustavop/" target="_blank" rel="noopener" aria-label="Me chama no direct do Instagram">
+    <svg aria-hidden="true"><use href="#i-dm"/></svg>
   </a>
 </body>
 </html>

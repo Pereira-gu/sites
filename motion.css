@@ -1,0 +1,50 @@
+/* ==========================================================================
+   MOVIMENTO E 3D (opcional)
+   Apagar este arquivo e o motion.js deixa o site completo, só sem movimento.
+   Tudo aqui anima só transform e opacity, e some para quem pede menos movimento.
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+
+  /* Título do topo: cada linha sobe de trás da própria base */
+  html.js .heroi .linha > span { animation: subir .9s var(--saida) both; }
+  html.js .heroi .linha + .linha > span { animation-delay: .11s; }
+  html.js .heroi__sub,
+  html.js .heroi .botoes { animation: aparecer .6s .45s var(--saida) both; }
+  html.js .celular__palco { animation: aparecer-celular 1s .25s var(--saida) both; }
+
+  /* Entrada das partes de cada seção, uma vez, ao aparecer na tela */
+  html.revela .reveal { transition: opacity .6s var(--saida), translate .6s var(--saida); transition-delay: var(--atraso, 0ms); }
+  html.revela .reveal:not(.visivel) { opacity: 0; translate: 0 28px; }
+
+  /* Celular em 3D (o motion.js põe a classe .tem-3d e as camadas da lateral) */
+  .celular.tem-3d .celular__palco,
+  .celular.tem-3d .celular__corpo { transform-style: preserve-3d; }
+  .celular.tem-3d .celular__corpo {
+    transform: rotateX(var(--rx, 8deg)) rotateY(var(--ry, -26deg)) rotateZ(-4deg);
+    will-change: transform;
+  }
+  .celular.tem-3d .celular__tela { position: relative; transform: translateZ(1px); }
+  .celular__camada {
+    position: absolute; inset: 0;
+    border-radius: 46px;
+    background: var(--cor, #0B0A08);
+    transform: translateZ(calc(var(--z) * -1px));
+  }
+  .celular__camada:last-child { background: var(--tinta-2); }
+
+  /* Troca de campo da seção "Site pra sua ...": a lista entra de novo */
+  .negocio__lista li { animation: aparecer .45s var(--saida) both; }
+  .negocio__lista li:nth-child(2) { animation-delay: .07s; }
+  .negocio__lista li:nth-child(3) { animation-delay: .14s; }
+
+  /* Foto do rodapé: aproxima devagar enquanto a página rola até ele */
+  @supports (animation-timeline: view()) {
+    .rodape__foto { overflow: hidden; }
+    .rodape__foto img { animation: aproximar linear both; animation-timeline: view(); animation-range: entry 0% cover 60%; }
+  }
+}
+
+@keyframes subir { from { transform: translateY(105%); } to { transform: none; } }
+@keyframes aparecer { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes aparecer-celular { from { opacity: 0; transform: translateY(48px); } to { opacity: 1; transform: none; } }
+@keyframes aproximar { from { transform: scale(1.12); } to { transform: scale(1); } }

@@ -1,178 +1,180 @@
 /* ==========================================================================
-   EDITE AQUI: preços, textos dos planos, contatos e portfólio.
+   EDITE AQUI: contatos e textos de cada tipo de negócio.
    Depois de salvar, é só recarregar a página. Não precisa mexer no resto.
    ========================================================================== */
 const CONFIG = {
   marca: 'Gustavo Pereira · Sites',
   whatsapp: '5511915072940',       // só números, com 55 e DDD
-  mensagem: 'Oi, Gustavo! Vi seu site e quero um orçamento.',
   instagram: 'dev.gustavop',       // sem o @
+  mensagemPadrao: 'Oi, Gustavo! Vi seu site e quero um orçamento.',
 
-  // Planos principais. "destaque: true" deixa o plano laranja, com o selo.
-  planos: [
-    {
-      nome: 'Essencial',
-      tipo: 'Vitrine',
-      preco: 400,
-      itens: ['1 página responsiva', 'Apresentação', 'Fotos', 'Horário', 'Mapa', 'Botão de WhatsApp'],
+  // Seção "Site pra sua ...": o que o site mostra para cada ramo.
+  negocios: {
+    barbearia: {
+      palavra: 'barbearia', artigo: 'uma barbearia',
+      itens: ['Serviços e preços à vista', 'Botão de agendar horário', 'WhatsApp com mensagem pronta'],
+      exemplo: { texto: 'Ver o exemplo da Fio Reto (demonstração)', url: 'https://pereira-gu.github.io/barbearia-demo' },
     },
-    {
-      nome: 'Catálogo',
-      tipo: 'Para vender mais fácil',
-      preco: 700,
-      destaque: true,
-      selo: 'Mais escolhido',
-      itens: ['Até 5 seções', 'Catálogo de produtos com fotos e preços', 'Botão de pedido pelo WhatsApp', 'Instagram integrado'],
+    salao: {
+      palavra: 'salão', artigo: 'um salão de beleza',
+      itens: ['Serviços com preço, por categoria', 'Fotos dos trabalhos', 'Agendamento pelo celular'],
     },
-    {
-      nome: 'Completo',
-      tipo: 'Para organizar o negócio',
-      preco: 1100,
-      itens: ['Tudo do Catálogo', 'Agendamento ou formulário de pedidos', 'Cadastro de clientes', 'Painel simples para o dono'],
+    buffet: {
+      palavra: 'buffet', artigo: 'um buffet',
+      itens: ['Pacotes e o que cada um inclui', 'Fotos do espaço', 'Pedido de orçamento com a data da festa'],
+      exemplo: { texto: 'Ver o exemplo da Soprô (demonstração)', url: 'https://pereira-gu.github.io/sopro/' },
     },
-  ],
-
-  manutencao: {
-    nome: 'Manutenção',
-    preco: 60,
-    itens: ['Pequenas alterações', 'Atualização de preços e fotos', 'Suporte'],
+    loja: {
+      palavra: 'loja', artigo: 'uma loja',
+      itens: ['Catálogo com foto e preço', 'Pedido direto no WhatsApp', 'Endereço, horário e mapa'],
+    },
+    outro: { artigo: 'um negócio' },
   },
-
-  // Faixa laranja abaixo dos planos.
-  oferta: {
-    titulo: 'Oferta de lançamento',
-    numero: '10%',
-    texto: 'de desconto para os 3 primeiros clientes por indicação',
-  },
-
-  // Texto pequeno abaixo dos planos.
-  condicoes: [
-    'Sinal de 50% para começar e 50% na entrega.',
-    'Até 2 rodadas de ajustes.',
-    'Domínio próprio por conta do cliente.',
-  ],
-
-  // Frase embaixo do botão da chamada final.
-  fraseConfianca: 'Orçamento sem compromisso',
-
-  // Para adicionar um case, copie um bloco, troque os dados e coloque a imagem em assets/.
-  portfolio: [
-    {
-      nome: 'Fio Reto',
-      tipo: 'Barbearia fictícia',
-      url: 'https://pereira-gu.github.io/barbearia-demo',
-      imagem: 'assets/case-fio-reto.jpg',
-      alt: 'Tela inicial do site da barbearia fictícia Fio Reto, com fundo verde-escuro e título em creme.',
-    },
-    {
-      nome: 'Soprô',
-      tipo: 'Salão de festas fictício',
-      url: 'https://pereira-gu.github.io/sopro/',
-      imagem: 'assets/case-sopro.jpg',
-      alt: 'Tela inicial do site do salão de festas fictício Soprô, com fundo amarelo e balões coloridos.',
-    },
-  ],
 };
 
 /* ==========================================================================
    Daqui para baixo é o funcionamento da página.
    ========================================================================== */
-const reais = (valor) => valor.toLocaleString('pt-BR');
-const linkWhats = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.mensagem)}`;
-const iconeWhats = '<svg class="btn__ico" aria-hidden="true"><use href="#i-wa"/></svg>';
-const preencher = (seletor, html) => document.querySelectorAll(seletor).forEach((el) => { el.innerHTML = html; });
+const linkWhats = (texto) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(texto)}`;
+const linkDirect = `https://www.instagram.com/${CONFIG.instagram}/`;
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 
-/* Etiquetas dos planos */
-document.querySelector('[data-planos]').innerHTML = CONFIG.planos.map((plano) => `
-  <article class="plano ${plano.destaque ? 'plano--destaque' : ''} reveal">
-    <span class="plano__furo" aria-hidden="true"></span>
-    ${plano.selo ? `<p class="plano__selo">${plano.selo}</p>` : ''}
-    <h3>${plano.nome}</h3>
-    <p class="plano__tipo">${plano.tipo}</p>
-    <p class="plano__preco"><small>R$</small> ${reais(plano.preco)}</p>
-    <ul>${plano.itens.map((item) => `<li>${item}</li>`).join('')}</ul>
-    <a class="btn ${plano.destaque ? 'btn--tinta' : 'btn--laranja'}" data-wa href="#" aria-label="Chamar no WhatsApp sobre o plano ${plano.nome}">
-      ${iconeWhats} Chamar no WhatsApp
-    </a>
-  </article>`).join('');
+/* Contatos (os links já estão no HTML; aqui só garantem os dados do CONFIG) */
+$$('[data-wa]:not([data-wa-pedido])').forEach((a) => { a.href = linkWhats(CONFIG.mensagemPadrao); });
+$$('[data-direct]').forEach((a) => { a.href = linkDirect; });
+$$('[data-texto="marca"]').forEach((el) => { el.textContent = CONFIG.marca; });
+$$('[data-ano]').forEach((el) => { el.textContent = new Date().getFullYear(); });
 
-/* Tira da manutenção */
-const m = CONFIG.manutencao;
-document.querySelector('[data-manutencao]').innerHTML = `
-  <aside class="manutencao reveal" aria-label="Plano opcional de ${m.nome}">
-    <div>
-      <p class="manutencao__opcional">Opcional</p>
-      <h3>${m.nome}</h3>
-    </div>
-    <p class="manutencao__preco"><small>R$</small> ${reais(m.preco)}<small> por mês</small></p>
-    <ul>${m.itens.map((item) => `<li>${item}</li>`).join('')}</ul>
-  </aside>`;
+/* --- Pedido de orçamento em 3 toques --- */
+const pedido = $('[data-pedido]');
+let mensagemPedido = CONFIG.mensagemPadrao;
 
-/* Oferta: o número aparece grande, mas o leitor de tela lê a frase na ordem certa */
-const o = CONFIG.oferta;
-document.querySelector('[data-oferta]').innerHTML = `
-  <p class="oferta reveal">
-    <span class="oferta__titulo">${o.titulo}:</span>
-    <strong class="oferta__num">${o.numero}</strong>
-    <span class="oferta__texto">${o.texto}</span>
-  </p>`;
+function atualizarPedido() {
+  if (!pedido) return;
+  const dados = new FormData(pedido);
+  const negocio = CONFIG.negocios[dados.get('negocio')] || CONFIG.negocios.outro;
+  const insta = dados.get('insta') === 'sim' ? 'já tenho Instagram' : 'ainda não tenho Instagram';
+  const agenda = {
+    sim: 'preciso de agendamento online',
+    nao: 'não preciso de agendamento',
+    'nao-sei': 'não sei se preciso de agendamento',
+  }[dados.get('agenda')];
+  mensagemPedido = `Oi, Gustavo! Tenho ${negocio.artigo}, ${insta} e ${agenda}. Quero um orçamento.`;
+  $('[data-pedido-texto]').textContent = mensagemPedido;
+  $('[data-wa-pedido]').href = linkWhats(mensagemPedido);
+}
+if (pedido) {
+  pedido.addEventListener('change', atualizarPedido);
+  atualizarPedido();
+}
 
-document.querySelector('[data-condicoes]').innerHTML = CONFIG.condicoes.map((c) => `<li>${c}</li>`).join('');
+/* No direct não dá para levar o texto pelo link: copiamos para a pessoa colar */
+$$('[data-copiar]').forEach((a) => a.addEventListener('click', () => {
+  if (!navigator.clipboard) return;
+  navigator.clipboard.writeText(mensagemPedido).then(() => {
+    const nota = $('[data-copiar-nota]');
+    if (nota) nota.textContent = 'Mensagem copiada. No direct, é só colar e enviar.';
+  }).catch(() => {});
+}));
 
-/* Cartões do portfólio, mais o espaço reservado para o próximo case */
-document.querySelector('[data-portfolio]').innerHTML = CONFIG.portfolio.map((c) => `
-  <article class="case reveal">
-    <img src="${c.imagem}" alt="${c.alt}" width="800" height="600" loading="lazy" decoding="async">
-    <div class="case__texto">
-      <div><h3>${c.nome}</h3><p>${c.tipo} · demonstração</p></div>
-      <a class="btn btn--laranja btn--curto" href="${c.url}" target="_blank" rel="noopener" aria-label="Ver site ${c.nome} (abre em nova aba)">Ver site</a>
-    </div>
-  </article>`).join('') + `
-  <article class="case case--proximo reveal">
-    <h3>O próximo pode ser o da sua loja</h3>
-    <a class="btn btn--laranja" data-wa href="#">${iconeWhats} Chamar no WhatsApp</a>
-  </article>`;
+/* --- Seletor "Site pra sua ..." --- */
+const secaoNegocio = $('[data-negocio-campo]');
+const botoesNegocio = $$('[data-negocio]');
 
-/* Valores repetidos em outras partes da página */
-preencher('[data-menor-preco]', reais(Math.min(...CONFIG.planos.map((p) => p.preco))));
-preencher('[data-preco-manutencao]', reais(m.preco));
-preencher('[data-texto="marca"]', CONFIG.marca);
-preencher('[data-texto="confianca"]', CONFIG.fraseConfianca);
-preencher('[data-ano]', new Date().getFullYear());
+function escolherNegocio(chave, focar) {
+  const n = CONFIG.negocios[chave];
+  if (!n) return;
+  botoesNegocio.forEach((b) => {
+    const ativo = b.dataset.negocio === chave;
+    b.setAttribute('aria-checked', ativo);
+    b.tabIndex = ativo ? 0 : -1;
+    if (ativo && focar) b.focus();
+  });
+  secaoNegocio.dataset.negocioCampo = chave;
+  $('[data-negocio-palavra]').textContent = n.palavra;
+  $('[data-negocio-lista]').innerHTML = n.itens.map((i) => `<li>${i}</li>`).join('');
+  $('[data-negocio-exemplo]').innerHTML = n.exemplo
+    ? `<a class="link-seta" href="${n.exemplo.url}" target="_blank" rel="noopener">${n.exemplo.texto}</a>`
+    : 'Ainda não tenho uma demonstração desse ramo. Me chama que eu te mostro como ficaria.';
 
-/* Links de contato */
-document.querySelectorAll('[data-wa]').forEach((a) => {
-  a.href = linkWhats;
-  a.target = '_blank';
-  a.rel = 'noopener';
+  /* Leva a escolha para o pedido de orçamento */
+  const radio = pedido && pedido.querySelector(`input[name="negocio"][value="${chave}"]`);
+  if (radio) { radio.checked = true; atualizarPedido(); }
+}
+
+botoesNegocio.forEach((b, i) => {
+  b.tabIndex = i === 0 ? 0 : -1;
+  b.addEventListener('click', () => escolherNegocio(b.dataset.negocio));
+  /* Setas trocam a opção, como num grupo de rádio */
+  b.addEventListener('keydown', (e) => {
+    const passo = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+    if (!passo) return;
+    e.preventDefault();
+    const prox = botoesNegocio[(i + passo + botoesNegocio.length) % botoesNegocio.length];
+    escolherNegocio(prox.dataset.negocio, true);
+  });
 });
-document.querySelectorAll('[data-insta]').forEach((a) => {
-  a.href = `https://www.instagram.com/${CONFIG.instagram}/`;
-  a.target = '_blank';
-  a.rel = 'noopener';
-  a.textContent = `Instagram @${CONFIG.instagram}`;
+
+/* --- Antes e depois --- */
+$$('[data-comparar]').forEach((caixa) => {
+  const controle = $('.comparar__controle', caixa);
+  const aplicar = () => {
+    const v = Number(controle.value);
+    caixa.style.setProperty('--pos', `${v}%`);
+    let texto = 'Metade antes, metade depois';
+    if (v <= 5) texto = 'Mostrando só o depois';
+    else if (v >= 95) texto = 'Mostrando só o antes';
+    else if (v < 50) texto = `${100 - v}% depois`;
+    else if (v > 50) texto = `${v}% antes`;
+    controle.setAttribute('aria-valuetext', texto);
+  };
+  controle.addEventListener('input', aplicar);
+  aplicar();
+
+  /* Arrastar com o dedo ou o mouse (as setas do teclado vão direto no controle) */
+  const moldura = $('.comparar__moldura', caixa);
+  const mover = (e) => {
+    const r = moldura.getBoundingClientRect();
+    const v = Math.round(Math.min(100, Math.max(0, ((e.clientX - r.left) / r.width) * 100)));
+    controle.value = v;
+    aplicar();
+  };
+  moldura.addEventListener('pointerdown', (e) => {
+    moldura.setPointerCapture(e.pointerId);
+    mover(e);
+    controle.focus({ preventScroll: true });
+  });
+  moldura.addEventListener('pointermove', (e) => { if (moldura.hasPointerCapture(e.pointerId)) mover(e); });
 });
 
-/* Animação ao rolar: cada bloco anima uma vez, ao entrar na tela */
-const reveals = document.querySelectorAll('.reveal');
-if ('IntersectionObserver' in window) {
-  const observador = new IntersectionObserver((entradas) => {
-    entradas.forEach((entrada) => {
-      if (!entrada.isIntersecting) return;
-      entrada.target.classList.add('visivel');
-      observador.unobserve(entrada.target);
+/* --- Como funciona: abre uma etapa por vez --- */
+const etapas = $$('[data-etapas] .etapa');
+etapas.forEach((etapa) => {
+  $('button', etapa).addEventListener('click', () => {
+    etapas.forEach((e) => {
+      const abrir = e === etapa;
+      e.classList.toggle('aberta', abrir);
+      $('button', e).setAttribute('aria-expanded', abrir);
     });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-  reveals.forEach((el) => observador.observe(el));
+  });
+});
 
-  /* Esconde o botão flutuante quando outro botão de WhatsApp passa embaixo dele */
-  const flutuante = document.querySelector('.flutuante');
+/* --- Botão flutuante: some quando outro botão de contato passa embaixo dele --- */
+const flutuante = $('.flutuante');
+if ('IntersectionObserver' in window && flutuante) {
   const naZona = new Set();
+  const secoesNaTela = new Set();
+  const atualizar = () => flutuante.classList.toggle('flutuante--oculto', secoesNaTela.size > 0 || naZona.size > 0);
   const zona = new IntersectionObserver((entradas) => {
     entradas.forEach((e) => (e.isIntersecting ? naZona.add(e.target) : naZona.delete(e.target)));
-    flutuante.classList.toggle('flutuante--oculto', naZona.size > 0);
-  }, { rootMargin: '-86% 0px 0px 0px' });
-  document.querySelectorAll('[data-wa]:not(.flutuante)').forEach((el) => zona.observe(el));
-} else {
-  reveals.forEach((el) => el.classList.add('visivel'));
+    atualizar();
+  }, { rootMargin: '-80% 0px 0px 0px' });
+  $$('.btn[data-direct], .btn[data-wa]').forEach((el) => zona.observe(el));
+  /* No topo e no pedido de orçamento os botões de contato já estão à vista */
+  const secoes = new IntersectionObserver((entradas) => {
+    entradas.forEach((e) => (e.isIntersecting ? secoesNaTela.add(e.target) : secoesNaTela.delete(e.target)));
+    atualizar();
+  }, { threshold: 0.15 });
+  $$('.heroi, .orcamento, .rodape').forEach((el) => secoes.observe(el));
 }
