@@ -1,0 +1,27 @@
+/* Sorriso Prime · confiável, azul e branco */
+:root{
+  --bg:#FFFFFF;--surface:#EEF4FB;--card:#FFFFFF;--card-alt:#FFFFFF;
+  --text:#0F2340;--muted:#4E607B;--border:#DCE6F2;--border-strong:#B8CBE2;
+  --primary:#1557B0;--primary-hover:#0F4590;--on-primary:#FFFFFF;--accent:#7FB2F0;
+  --eyebrow:#1557B0;--price:#1557B0;--stars:#E2A21B;
+  --font-display:"Plus Jakarta Sans",system-ui,sans-serif;--font-body:"Plus Jakarta Sans",system-ui,sans-serif;
+  --display-weight:800;--display-tracking:-.03em;
+  --radius:16px;--radius-sm:10px;--radius-btn:12px;
+  --shadow:0 6px 24px rgba(15,35,64,.06);
+  --header-bg:rgba(255,255,255,.93);--header-solid:#fff;--demo-bg:#0F2340;--demo-text:#DCE6F2;
+  --footer-bg:#0F2340;--footer-text:#DCE6F2;--map-bg:#E3ECF7;
+  --avatar-bg:#E3ECF7;--avatar-text:#1557B0;--tag-bg:#E3ECF7;--tag-text:#0F4590;
+}
+.hero{background:linear-gradient(180deg,#F4F8FD,#fff)}
+.hero-art{min-height:340px}
+.placa-azul{position:absolute;right:4%;top:0;width:76%;height:88%;border-radius:32px;background:linear-gradient(150deg,#7FB2F0,#1557B0)}
+.dente{position:absolute;right:22%;top:12%;width:40%;aspect-ratio:.82;background:#fff;border-radius:46% 46% 30% 30%/40% 40% 60% 60%;box-shadow:0 20px 40px rgba(15,35,64,.25)}
+.dente::before,.dente::after{content:"";position:absolute;bottom:-26%;width:28%;height:40%;background:#fff;border-radius:0 0 60% 60%}.dente::before{left:14%;transform:rotate(6deg)}.dente::after{right:14%;transform:rotate(-6deg)}
+.agenda{position:absolute;left:0;bottom:2%;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1rem 1.2rem;display:grid;box-shadow:0 16px 40px rgba(15,35,64,.14)}
+.agenda small{color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}
+.agenda strong{font-size:1.3rem}.agenda span{color:var(--muted);font-size:.88rem}
+.agenda em{font-style:normal;font-size:.7rem;font-weight:700;color:var(--primary);text-transform:uppercase}
+.card h3::before{content:"";display:block;width:36px;height:4px;border-radius:2px;background:var(--accent);margin-bottom:.9rem}
+.convenios{list-style:none;padding:0;margin:0;display:grid;gap:.6rem;grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+.convenios li{background:#fff;border:1px solid var(--border-strong);border-radius:12px;padding:.9rem 1rem;font-weight:700}
+.convenios li:last-child{grid-column:1/-1;background:var(--primary);color:#fff;border-color:var(--primary)}

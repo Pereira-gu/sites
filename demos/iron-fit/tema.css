@@ -1,0 +1,35 @@
+/* Iron Fit · energético, neon, escuro */
+:root{
+  --bg:#0B0D12;--surface:#12151D;--card:#161A24;--card-alt:#0F1219;
+  --text:#E8ECF5;--muted:#A3ABBE;--border:#262C3A;--border-strong:#3A4357;
+  --primary:#C6FF00;--primary-hover:#D8FF4D;--on-primary:#0B0D12;--accent:#00E5FF;
+  --eyebrow:#C6FF00;--price:#E8ECF5;--stars:#C6FF00;--check:#C6FF00;--primary-text:#00E5FF;
+  --font-display:"Chakra Petch",Arial,sans-serif;--font-body:"Inter",system-ui,sans-serif;
+  --display-weight:700;--display-tracking:-.01em;--display-case:uppercase;--h1-max:4.4rem;
+  --radius:10px;--radius-sm:8px;--radius-btn:8px;
+  --btn-case:uppercase;--btn-tracking:.06em;--btn-shadow:0 0 24px rgba(198,255,0,.35);
+  --header-bg:rgba(11,13,18,.9);--header-solid:#0B0D12;--demo-bg:#C6FF00;--demo-text:#0B0D12;
+  --footer-bg:#06070A;--footer-text:#A3ABBE;--map-bg:#161A24;--map-road:rgba(0,229,255,.25);
+  --avatar-bg:#1F2533;--avatar-text:#C6FF00;--tag-bg:#1F2533;--tag-text:#C6FF00;--input-bg:#0F1219;
+}
+.brand{letter-spacing:.04em}
+.brand span{color:var(--primary);text-shadow:0 0 18px rgba(198,255,0,.6)}
+.hero{background:radial-gradient(50% 60% at 80% 40%,rgba(0,229,255,.14),transparent 70%),radial-gradient(40% 50% at 20% 90%,rgba(198,255,0,.08),transparent 70%)}
+h1{text-shadow:0 0 40px rgba(198,255,0,.15)}
+.hero-art{min-height:340px;display:grid;place-items:center}
+.anel{position:absolute;width:min(320px,70vw);aspect-ratio:1;border-radius:50%;border:3px solid var(--accent);box-shadow:0 0 40px rgba(0,229,255,.5),inset 0 0 40px rgba(0,229,255,.25)}
+.barra{position:relative;display:flex;align-items:center;transform:rotate(-18deg);z-index:1}
+.haste{width:min(220px,44vw);height:12px;background:linear-gradient(#DCE2EE,#7C879C);border-radius:6px}
+.anilha{width:26px;border-radius:6px;background:var(--primary);box-shadow:0 0 18px rgba(198,255,0,.55)}
+.a1,.a4{height:90px}.a2,.a3{height:130px;margin:0 4px}
+.stat{position:absolute;left:0;bottom:4%;background:var(--card);border:1px solid var(--border-strong);border-left:4px solid var(--primary);padding:.9rem 1.1rem;border-radius:8px;display:grid;gap:.15rem;z-index:2}
+.stat small{color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}
+.stat strong{font-family:var(--font-display);font-size:1.3rem;text-transform:uppercase}
+.tag-mod{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:.6rem}
+.card{transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--primary)}
+.card.destaque{box-shadow:0 0 0 1px var(--primary),0 0 40px rgba(198,255,0,.15)}
+.filtro-mod{margin-top:2rem}
+td strong{color:var(--primary)}
+td.num{font-family:var(--font-display);font-size:1.1rem}
+.chip[aria-selected=true],.chip[aria-pressed=true]{box-shadow:0 0 18px rgba(198,255,0,.35)}

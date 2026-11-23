@@ -1,0 +1,91 @@
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Academia · Asa Sul, Brasília</span>
+      <h1>Treine com gente que conhece seu nome</h1>
+      <p class="lead">Musculação com acompanhamento de verdade, aulas coletivas cheias de energia e horário das 5h às 23h para caber na sua rotina.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contato" data-wa="Fala! Quero marcar uma aula experimental na Iron Fit.">Aula experimental grátis</a>
+        <a class="btn btn-ghost" href="#horarios">Ver horários</a>
+      </div>
+      <ul class="hero-facts">
+        <li><strong>5h às 23h</strong>de segunda a sexta</li>
+        <li><strong>6 modalidades</strong>inclusas no plano</li>
+        <li><strong>Avaliação física</strong>na matrícula</li>
+      </ul>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="anel"></div>
+      <div class="barra"><span class="anilha a1"></span><span class="anilha a2"></span><span class="haste"></span><span class="anilha a3"></span><span class="anilha a4"></span></div>
+      <div class="stat"><small>Ocupação agora</small><strong>Tranquila</strong><span class="ficticio">exemplo</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="modalidades">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Modalidades</span><h2>Escolha como quer suar</h2><p>Todas inclusas no plano, sem taxa extra por aula.</p></div>
+    <div class="grid" style="--min:230px">
+      <article class="card"><span class="tag-mod">Livre</span><h3>Musculação</h3><p>Equipamentos novos, área de peso livre e professor no salão o dia todo.</p></article>
+      <article class="card"><span class="tag-mod">45 min</span><h3>Funcional</h3><p>Circuitos com kettlebell, corda e peso do corpo. Turmas de até 16 alunos.</p></article>
+      <article class="card"><span class="tag-mod">45 min</span><h3>Spinning</h3><p>Bike com luz e playlist alta. Queima garantida, adaptado a todos os níveis.</p></article>
+      <article class="card"><span class="tag-mod">30 min</span><h3>HIIT 30</h3><p>Intervalado de alta intensidade no horário do almoço. Entra, treina, volta.</p></article>
+      <article class="card"><span class="tag-mod">1 h</span><h3>Muay thai</h3><p>Técnica, condicionamento e defesa pessoal. Luvas emprestadas na primeira aula.</p></article>
+      <article class="card"><span class="tag-mod">1 h</span><h3>Yoga flow</h3><p>Mobilidade e respiração para equilibrar a semana de treino pesado.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="planos">
+  <div class="container">
+    <div class="sec-head center"><span class="eyebrow">Planos</span><h2>Sem taxa de matrícula</h2><p>Todos os planos dão acesso a musculação e às 6 modalidades. <span class="ficticio">valores fictícios</span></p></div>
+    <div class="grid">
+      <article class="card"><h3>Mensal</h3><p class="price">R$ 149 <small>/mês</small></p><ul class="check"><li>Acesso livre todos os dias</li><li>Todas as aulas coletivas</li><li>Cancela quando quiser</li></ul><a class="btn btn-ghost push" href="#" data-wa="Quero saber do plano Mensal da Iron Fit.">Quero o mensal</a></article>
+      <article class="card destaque"><span class="selo">Melhor custo</span><h3>Anual</h3><p class="price">R$ 109 <small>/mês em 12x</small></p><ul class="check"><li>Tudo do mensal</li><li>Avaliação física a cada 3 meses</li><li>2 meses de férias congeladas</li><li>1 amigo grátis por mês</li></ul><a class="btn btn-primary push" href="#" data-wa="Quero saber do plano Anual da Iron Fit.">Quero o anual</a></article>
+      <article class="card"><h3>Trimestral</h3><p class="price">R$ 129 <small>/mês</small></p><ul class="check"><li>Tudo do mensal</li><li>Avaliação física de saída</li><li>Camiseta Iron Fit</li></ul><a class="btn btn-ghost push" href="#" data-wa="Quero saber do plano Trimestral da Iron Fit.">Quero o trimestral</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="horarios">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Horários</span><h2>Grade de aulas</h2><p>Escolha o dia e filtre pela modalidade. A grade abre no dia de hoje. <span class="ficticio">grade de exemplo</span></p></div>
+    {{HORARIOS}}
+    <div class="filtro-mod">
+      <p class="legend" id="mod-label">Filtrar por modalidade</p>
+      <div class="chips" data-filter="#grade" data-one="aula" data-many="aulas" aria-labelledby="mod-label">
+        <button class="chip" data-value="todos" aria-pressed="true">Todas</button>
+        <button class="chip" data-value="funcional" aria-pressed="false">Funcional</button>
+        <button class="chip" data-value="spinning" aria-pressed="false">Spinning</button>
+        <button class="chip" data-value="hiit" aria-pressed="false">HIIT</button>
+        <button class="chip" data-value="luta" aria-pressed="false">Muay thai</button>
+        <button class="chip" data-value="yoga" aria-pressed="false">Yoga</button>
+      </div>
+      <p class="filter-status" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="professores">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Professores</span><h2>Quem vai puxar seu treino</h2></div>
+    <div class="grid" style="--min:220px">
+      <article class="card"><div class="avatar">RA</div><h3>Rafa Alencar</h3><p class="role">Funcional e HIIT</p><p>Educador físico, especialista em treino funcional. CREF fictício.</p></article>
+      <article class="card"><div class="avatar">CS</div><h3>Carol Sena</h3><p class="role">Spinning e HIIT</p><p>Ex-atleta de ciclismo. Playlists que viram assunto no vestiário.</p></article>
+      <article class="card"><div class="avatar">JN</div><h3>Mestre Jonas</h3><p class="role">Muay thai</p><p>Faixa preta, 15 anos de tatame. Técnica antes de força.</p></article>
+      <article class="card"><div class="avatar">AM</div><h3>Ana Mattos</h3><p class="role">Yoga flow</p><p>Professora certificada de yoga, foco em mobilidade para quem treina.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="contato">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">Aula experimental</span><h2>Venha treinar um dia por nossa conta</h2>
+      <p>Traga roupa de treino e garrafinha. A gente faz uma avaliação rápida e monta seu primeiro treino.</p>
+      <dl class="info"><div><dt>Endereço</dt><dd>SCLS 410, Bloco C, loja 12 · Asa Sul, Brasília/DF <span class="ficticio">fictício</span></dd></div><div><dt>Horários</dt><dd>Seg a sex, 5h às 23h · Sáb, 7h às 14h · Dom, 8h às 12h</dd></div></dl>
+      <div class="hero-actions"><a class="btn btn-primary" href="#" data-wa="Fala! Quero marcar uma aula experimental na Iron Fit.">Aula experimental</a></div>
+    </div>
+    <div class="mapa" role="img" aria-label="Mapa ilustrativo da Asa Sul com a localização da academia"><span class="pin">Iron Fit</span></div>
+  </div>
+</section>

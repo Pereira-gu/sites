@@ -1,0 +1,28 @@
+/* Sabor de Casa · caseiro, verde e laranja */
+:root{
+  --bg:#FFFBF2;--surface:#F1F6E9;--card:#FFFFFF;--card-alt:#FFFFFF;
+  --text:#24301F;--muted:#55614F;--border:#E4E7D6;--border-strong:#B9C2A6;
+  --primary:#2F7D32;--primary-hover:#256528;--on-primary:#FFFFFF;--accent:#F28C28;
+  --eyebrow:#B5560A;--price:#2F7D32;--stars:#E08A1E;
+  --font-display:"Bitter",Georgia,serif;--font-body:"Nunito",system-ui,sans-serif;
+  --display-weight:800;--display-tracking:-.015em;
+  --radius:18px;--radius-sm:12px;--radius-btn:12px;
+  --header-bg:rgba(255,251,242,.94);--header-solid:#FFFBF2;--demo-bg:#24301F;--demo-text:#F1F6E9;
+  --footer-bg:#24301F;--footer-text:#E4E7D6;--map-bg:#E8EFD9;--tag-bg:#FDE6CC;--tag-text:#8A3F05;
+}
+body{background-image:linear-gradient(90deg,rgba(47,125,50,.04) 50%,transparent 50%),linear-gradient(rgba(47,125,50,.04) 50%,transparent 50%);background-size:40px 40px}
+.brand span{color:var(--accent)}
+.hero-art{min-height:330px;display:grid;place-items:center}
+.marmita{position:relative;width:min(340px,80vw);aspect-ratio:1.35;background:#E6E1D3;border-radius:22px;padding:14px;display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:1fr 1fr;gap:10px;box-shadow:0 24px 50px rgba(36,48,31,.2);transform:rotate(-4deg)}
+.comp{border-radius:12px}
+.arroz{background:radial-gradient(#fff 35%,transparent 40%) 0 0/9px 9px,#F7F3E8;grid-row:1/3}
+.feijao{background:radial-gradient(#4A2A1A 40%,transparent 45%) 0 0/12px 12px,#6B3E26}
+.salada{background:radial-gradient(circle at 30% 40%,#E0452B 0 12%,transparent 13%),radial-gradient(circle at 70% 60%,#F28C28 0 10%,transparent 11%),#5DA34A}
+.carne{display:none}
+.tampa{position:absolute;right:-30%;top:-14%;width:50%;height:30%;border-radius:12px;background:#F28C28;transform:rotate(18deg);opacity:.9}
+.etiqueta{position:absolute;left:2%;bottom:4%;background:#fff;border:2px solid var(--primary);border-radius:12px;padding:.7rem 1rem;font-weight:800;color:var(--primary);transform:rotate(-3deg)}
+.etiqueta small{display:block;font-weight:400;color:var(--muted);font-size:.75rem}
+.prato .tipo{font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#8A3F05;background:var(--tag-bg);width:max-content;padding:.2rem .6rem;border-radius:99px;margin-bottom:.8rem}
+.prato h3{font-family:var(--font-body);font-weight:700;font-size:1.05rem;line-height:1.45}
+.bairros{columns:2;padding-left:1.1rem;margin:0 0 1rem}
+.bairros li{margin-bottom:.35rem}

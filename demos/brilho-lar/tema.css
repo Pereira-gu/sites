@@ -1,0 +1,30 @@
+/* Brilho Lar · leve, azul-claro */
+:root{
+  --bg:#F7FBFF;--surface:#E6F2FC;--card:#FFFFFF;--card-alt:#FFFFFF;
+  --text:#12324A;--muted:#4A6478;--border:#D6E7F5;--border-strong:#A9CBE6;
+  --primary:#0B6FB8;--primary-hover:#095C99;--on-primary:#FFFFFF;--accent:#7FD3F7;
+  --eyebrow:#0B6FB8;--price:#0B6FB8;--stars:#E0A82E;
+  --font-display:"Outfit",system-ui,sans-serif;--font-body:"Outfit",system-ui,sans-serif;
+  --display-weight:700;--display-tracking:-.025em;
+  --radius:22px;--radius-sm:14px;--radius-btn:999px;
+  --shadow:0 8px 30px rgba(11,111,184,.07);
+  --header-bg:rgba(247,251,255,.93);--header-solid:#F7FBFF;--demo-bg:#12324A;--demo-text:#E6F2FC;
+  --footer-bg:#12324A;--footer-text:#D6E7F5;--map-bg:#E0EEF9;--opt-on:#F0F8FF;--total-bg:#E6F2FC;
+  --tag-bg:#DDEFFC;--tag-text:#0A5590;
+}
+.brand span{color:var(--accent);-webkit-text-stroke:0}
+.brand span{color:#0B6FB8;font-weight:400}
+.hero{background:radial-gradient(55% 70% at 80% 35%,#DDF2FD,transparent 70%)}
+.hero-art{min-height:340px}
+.janela{position:absolute;right:10%;top:4%;width:58%;aspect-ratio:.85;border:10px solid #fff;border-radius:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px;background:#fff;box-shadow:0 20px 50px rgba(11,111,184,.18)}
+.janela span{border-radius:8px;background:linear-gradient(135deg,#BFE7FB,#7FD3F7 55%,#4FB6E8)}
+.janela span:nth-child(1){background:linear-gradient(135deg,#E9F8FF 0 30%,#BFE7FB 30% 38%,#7FD3F7 38%)}
+.brilho{position:absolute;width:34px;aspect-ratio:1;background:#fff;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);filter:drop-shadow(0 0 6px rgba(127,211,247,.9))}
+.s1{right:6%;top:2%}.s2{right:64%;top:30%;width:22px}.s3{right:20%;top:62%;width:28px}
+.aviso-card{position:absolute;left:0;bottom:4%;background:#fff;border:1px solid var(--border);border-radius:16px;padding:1rem 1.2rem;display:grid;box-shadow:0 16px 40px rgba(18,50,74,.14)}
+.aviso-card small{color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}
+.aviso-card strong{font-size:1.3rem}.aviso-card span{color:var(--muted);font-size:.88rem}
+.aviso-card em{font-style:normal;font-size:.7rem;font-weight:700;color:var(--primary);text-transform:uppercase}
+.card h3::before{content:"✦";display:block;color:var(--accent);font-size:1.3rem;margin-bottom:.5rem}
+.areas{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.areas li{background:#fff;border:1px solid var(--border-strong);border-radius:99px;padding:.5rem 1rem;font-weight:600}

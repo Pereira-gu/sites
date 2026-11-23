@@ -1,0 +1,38 @@
+/* Auto Center Pistão · robusto, preto e amarelo */
+:root{
+  --bg:#F4F2EE;--surface:#E9E6E0;--card:#FFFFFF;--card-alt:#FFFFFF;
+  --text:#121212;--muted:#4F4B45;--border:#D6D1C8;--border-strong:#9E978B;
+  --primary:#FFC20E;--primary-hover:#FFD24A;--on-primary:#121212;--accent:#121212;
+  --primary-text:#8A6400;--eyebrow:#121212;--price:#121212;--stars:#C99400;--check:#121212;
+  --font-display:"Archivo",Arial,sans-serif;--font-body:"Archivo",Arial,sans-serif;
+  --display-weight:900;--display-tracking:-.02em;--display-case:uppercase;--h1-max:4.2rem;
+  --radius:4px;--radius-sm:4px;--radius-btn:4px;--radius-chip:4px;
+  --btn-case:uppercase;--btn-tracking:.04em;
+  --header-bg:#121212;--header-solid:#121212;--demo-bg:#FFC20E;--demo-text:#121212;
+  --footer-bg:#121212;--footer-text:#D6D1C8;--map-bg:#DCD7CE;--dark-bg:#121212;--dark-text:#F4F2EE;
+  --tag-bg:#FFE9A6;--tag-text:#5C4300;--focus:#121212;
+}
+.site-header{border-bottom:4px solid var(--primary)}
+.site-header .brand,.site-header .menu a:not(.btn),.menu-toggle{color:#F4F2EE}
+.menu-toggle{border-color:#555}
+@media(min-width:960px){.site-header .menu a:not(.btn):hover{color:var(--primary)}}
+.eyebrow{background:var(--primary);padding:.2rem .55rem}
+.hero{background:#121212;color:#F4F2EE}
+.hero .lead,.hero .hero-facts{color:#C9C4BB}.hero .hero-facts strong{color:#fff}
+.hero .btn-ghost{color:#F4F2EE}
+.hero .eyebrow{color:#121212}
+.hero-art{min-height:340px}
+.faixa{position:absolute;inset:auto 0 12% 0;height:44px;background:repeating-linear-gradient(-45deg,#FFC20E 0 26px,#121212 26px 52px);transform:rotate(-6deg)}
+.engrenagem{position:absolute;right:10%;top:2%;width:58%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#121212 0 22%,#FFC20E 23% 58%,transparent 59%),conic-gradient(#FFC20E 0 6%,transparent 6% 12.5%,#FFC20E 12.5% 18.5%,transparent 18.5% 25%,#FFC20E 25% 31%,transparent 31% 37.5%,#FFC20E 37.5% 43.5%,transparent 43.5% 50%,#FFC20E 50% 56%,transparent 56% 62.5%,#FFC20E 62.5% 68.5%,transparent 68.5% 75%,#FFC20E 75% 81%,transparent 81% 87.5%,#FFC20E 87.5% 93.5%,transparent 93.5%);-webkit-mask:radial-gradient(circle,#000 0 70%,transparent 71%);mask:radial-gradient(circle,#000 0 70%,transparent 71%)}
+.ficha{position:absolute;left:0;top:44%;background:#F4F2EE;color:#121212;padding:1rem 1.2rem;border-left:6px solid var(--primary);display:grid;box-shadow:0 14px 30px rgba(0,0,0,.4)}
+.ficha small{text-transform:uppercase;font-size:.72rem;letter-spacing:.1em;color:#4F4B45}
+.ficha strong{font-size:1.15rem;font-weight:800}.ficha span{font-size:.85rem;color:#4F4B45}.ficha em{font-size:.7rem;color:#8A6400;font-style:normal;font-weight:700;text-transform:uppercase}
+.card{border-top:4px solid #121212}
+.ico{font-weight:900;font-size:.85rem;background:#121212;color:var(--primary);width:max-content;padding:.15rem .5rem;margin-bottom:.8rem}
+.marcas{list-style:none;padding:0;margin:0;display:grid;gap:.6rem;grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+.marcas li{background:#fff;border:2px solid #121212;padding:.85rem;text-align:center;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+.sec-dark .sec-head p{color:#C9C4BB}
+.sec-dark .card{background:#1E1E1E;border-color:#333;border-top-color:var(--primary);color:#F4F2EE}
+.sec-dark .card p{color:#C9C4BB}
+.garantia .big{font-size:2.2rem;font-weight:900;color:var(--primary)!important;line-height:1;margin-bottom:.6rem;text-transform:uppercase}
+.btn-primary{border-color:#121212}

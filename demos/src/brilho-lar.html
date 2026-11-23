@@ -1,0 +1,119 @@
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Diaristas e limpeza residencial · Vitória, ES</span>
+      <h1>Casa limpa sem você levantar do sofá</h1>
+      <p class="lead">Diaristas treinadas, com referências conferidas e seguro, para limpeza padrão, pesada ou pós-obra. Simule o preço e agende em minutos.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#simulador">Simular preço</a>
+        <a class="btn btn-ghost" href="#como-funciona">Como funciona</a>
+      </div>
+      <ul class="hero-facts">
+        <li><strong>Profissionais verificadas</strong>com referências</li>
+        <li><strong>Produtos inclusos</strong>se você quiser</li>
+        <li><strong>Refazemos</strong>se algo ficar para trás</li>
+      </ul>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="janela"><span></span><span></span><span></span><span></span></div>
+      <div class="brilho s1"></div><div class="brilho s2"></div><div class="brilho s3"></div>
+      <div class="aviso-card"><small>Diária confirmada</small><strong>Sáb · 8h</strong><span>Apto 2 quartos</span><em>exemplo</em></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="servicos">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Serviços</span><h2>Do jeito que sua casa precisa</h2></div>
+    <div class="grid" style="--min:230px">
+      <article class="card"><h3>Limpeza padrão</h3><p>Pó, chão, banheiros, cozinha e troca de roupa de cama. Para manter a casa em dia.</p></article>
+      <article class="card"><h3>Limpeza pesada</h3><p>Azulejos, rejunte, vidros, atrás dos móveis e dentro dos armários.</p></article>
+      <article class="card"><h3>Pós-obra</h3><p>Remoção de pó fino, respingos de tinta e cimento. Deixa pronto para morar.</p></article>
+      <article class="card"><h3>Passadoria</h3><p>Roupas passadas e dobradas. Pode ser junto da diária ou separado.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="simulador">
+  <div class="container split wide-r">
+    <div class="sec-head">
+      <span class="eyebrow">Simulador</span><h2>Quanto fica a sua diária?</h2>
+      <p>Informe os cômodos, o tipo de limpeza e os extras. O resumo vai pronto para o WhatsApp. <span class="ficticio">preços fictícios</span></p>
+      <p class="note">O valor é confirmado depois de algumas fotos do imóvel, principalmente em limpeza pós-obra.</p>
+    </div>
+    <form class="panel form" data-calc aria-label="Simulador de preço por cômodo">
+      <div>
+        <p class="legend">Cômodos</p>
+        <div class="counter-row"><label for="q-quarto">Quartos<small>R$ 35 cada</small></label><input type="number" id="q-quarto" min="0" max="10" value="2" data-unit="35" data-label="quarto(s)"></div>
+        <div class="counter-row"><label for="q-banho">Banheiros<small>R$ 30 cada</small></label><input type="number" id="q-banho" min="0" max="10" value="1" data-unit="30" data-label="banheiro(s)"></div>
+        <div class="counter-row"><label for="q-sala">Salas<small>R$ 30 cada</small></label><input type="number" id="q-sala" min="0" max="5" value="1" data-unit="30" data-label="sala(s)"></div>
+        <div class="counter-row"><label for="q-coz">Cozinha<small>R$ 40 cada</small></label><input type="number" id="q-coz" min="0" max="3" value="1" data-unit="40" data-label="cozinha(s)"></div>
+        <div class="counter-row"><label for="q-area">Área de serviço ou varanda<small>R$ 25 cada</small></label><input type="number" id="q-area" min="0" max="5" value="1" data-unit="25" data-label="área(s) externa(s)"></div>
+      </div>
+      <fieldset><legend class="legend">Tipo de limpeza</legend>
+        <div class="options">
+          <div class="opt"><input type="radio" name="tipo" id="tp1" data-mult="1" data-label="Limpeza padrão" checked><label for="tp1">Padrão<small>manutenção</small></label></div>
+          <div class="opt"><input type="radio" name="tipo" id="tp2" data-mult="1.4" data-label="Limpeza pesada"><label for="tp2">Pesada<small>+ 40%</small></label></div>
+          <div class="opt"><input type="radio" name="tipo" id="tp3" data-mult="1.9" data-label="Limpeza pós-obra"><label for="tp3">Pós-obra<small>+ 90%</small></label></div>
+        </div>
+      </fieldset>
+      <fieldset><legend class="legend">Extras</legend>
+        <div class="options" style="--opt-min:190px">
+          <div class="opt"><input type="checkbox" id="e1" data-flat="40" data-label="Passar roupa (até 2 h)"><label for="e1">Passar roupa<small>+ R$ 40 · até 2 h</small></label></div>
+          <div class="opt"><input type="checkbox" id="e2" data-flat="30" data-label="Dentro da geladeira"><label for="e2">Dentro da geladeira<small>+ R$ 30</small></label></div>
+          <div class="opt"><input type="checkbox" id="e3" data-flat="25" data-label="Produtos de limpeza inclusos"><label for="e3">Levamos os produtos<small>+ R$ 25</small></label></div>
+        </div>
+      </fieldset>
+      <div class="total-box" aria-live="polite">
+        <div><span class="total-label">Estimativa da diária</span><div class="total" data-total>R$ 195,00</div></div>
+        <a class="btn btn-primary" href="#" data-calc-wa="Olá! Simulei minha diária no site da Brilho Lar:">Solicitar diária</a>
+      </div>
+      <p class="note" data-summary></p>
+    </form>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="pacotes">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Pacotes</span><h2>Diária fixa sai mais em conta</h2><p>Mesma profissional sempre que possível. <span class="ficticio">descontos fictícios</span></p></div>
+    <div class="grid">
+      <article class="card"><h3>Avulsa</h3><p class="price">Preço do simulador</p><p>Para uma faxina pontual, mudança ou visita chegando.</p><a class="btn btn-ghost push" href="#simulador">Simular</a></article>
+      <article class="card destaque"><span class="selo">Mais procurado</span><h3>Semanal</h3><p class="price">15% off</p><p>Uma diária por semana, no mesmo dia e horário. Casa sempre em dia.</p><a class="btn btn-primary push" href="#" data-wa="Quero saber do pacote semanal da Brilho Lar.">Quero o semanal</a></article>
+      <article class="card"><h3>Quinzenal</h3><p class="price">8% off</p><p>Uma diária a cada 15 dias. Bom para quem mora sozinho.</p><a class="btn btn-ghost push" href="#" data-wa="Quero saber do pacote quinzenal da Brilho Lar.">Quero o quinzenal</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="como-funciona">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Como funciona</span><h2>Em 4 passos</h2></div>
+    <ol class="steps">
+      <li><h3>Simule</h3><p>Use o simulador e envie o resumo pelo WhatsApp.</p></li>
+      <li><h3>Confirme</h3><p>Combinamos data, horário e quem vai, com nome e foto da profissional.</p></li>
+      <li><h3>Limpeza</h3><p>A diarista chega no horário, com checklist do que será feito.</p></li>
+      <li><h3>Aprove</h3><p>Você confere e paga no Pix. Ficou algo para trás? Voltamos sem custo em até 48 h.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="areas">
+  <div class="container split">
+    <div class="sec-head">
+      <span class="eyebrow">Áreas atendidas</span><h2>Vitória e região</h2>
+      <p>Atendemos casas e apartamentos nestes bairros. Outro bairro? Pergunta no WhatsApp. <span class="ficticio">lista de exemplo</span></p>
+    </div>
+    <ul class="areas"><li>Jardim da Penha</li><li>Praia do Canto</li><li>Jardim Camburi</li><li>Mata da Praia</li><li>Bento Ferreira</li><li>Enseada do Suá</li><li>Santa Lúcia</li><li>Praia do Suá</li><li>Centro</li></ul>
+  </div>
+</section>
+
+<section class="sec" id="duvidas">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Dúvidas</span><h2>Perguntas frequentes</h2></div>
+    <div class="faq">
+      <details><summary>Preciso estar em casa durante a limpeza?</summary><p>Não precisa. Muitos clientes deixam a chave na portaria. A profissional manda foto quando chega e quando termina.</p></details>
+      <details><summary>Quanto tempo dura uma diária?</summary><p>Uma limpeza padrão em apartamento de 2 quartos leva cerca de 6 horas. Pesada e pós-obra podem levar o dia todo.</p></details>
+      <details><summary>Vocês trazem os produtos?</summary><p>Se você marcar a opção no simulador, sim. Caso contrário, usamos os produtos da casa e avisamos antes se faltar algo.</p></details>
+      <details><summary>E se eu precisar cancelar?</summary><p>Cancelamento sem custo com até 24 h de antecedência.</p></details>
+    </div>
+  </div>
+</section>

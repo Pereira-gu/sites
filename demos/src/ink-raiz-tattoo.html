@@ -1,0 +1,112 @@
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Estúdio de tatuagem · Lapa, Rio de Janeiro</span>
+      <h1>Arte que fica. Feita com você, não só em você.</h1>
+      <p class="lead">Projetos autorais em fineline, blackwork, realismo, old school e pontilhismo. Material descartável, estúdio licenciado e sessão sem pressa.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#orcamento">Fazer orçamento</a>
+        <a class="btn btn-ghost" href="#portfolio">Ver portfólio</a>
+      </div>
+      <ul class="hero-facts">
+        <li><strong>3 artistas</strong>residentes</li>
+        <li><strong>Desenho exclusivo</strong>nada de catálogo</li>
+        <li><strong>A partir de 18 anos</strong>com documento</li>
+      </ul>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="moldura"><div class="art art-blackwork"></div></div>
+      <div class="carimbo">RAIZ<br>* RJ *</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="portfolio">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Portfólio</span><h2>Filtre pelo estilo que te pega</h2><p>Artes ilustrativas de exemplo. No site real entram fotos dos trabalhos, com autorização de quem tatuou.</p></div>
+    <div class="chips" data-filter="#obras" data-one="trabalho" data-many="trabalhos" aria-label="Filtrar portfólio por estilo">
+      <button class="chip" data-value="todos" aria-pressed="true">Todos</button>
+      <button class="chip" data-value="fineline" aria-pressed="false">Fineline</button>
+      <button class="chip" data-value="blackwork" aria-pressed="false">Blackwork</button>
+      <button class="chip" data-value="realismo" aria-pressed="false">Realismo</button>
+      <button class="chip" data-value="oldschool" aria-pressed="false">Old school</button>
+      <button class="chip" data-value="pontilhismo" aria-pressed="false">Pontilhismo</button>
+    </div>
+    <p class="filter-status" aria-live="polite"></p>
+    <div class="obras" id="obras">
+      <figure class="obra" data-cat="fineline"><div class="art art-fineline"></div><figcaption><strong>Ramo de oliveira</strong><span>Fineline · Duda</span></figcaption></figure>
+      <figure class="obra" data-cat="blackwork"><div class="art art-blackwork"></div><figcaption><strong>Mandala geométrica</strong><span>Blackwork · Caio</span></figcaption></figure>
+      <figure class="obra" data-cat="realismo"><div class="art art-realismo"></div><figcaption><strong>Retrato em sombra</strong><span>Realismo · Nina</span></figcaption></figure>
+      <figure class="obra" data-cat="oldschool"><div class="art art-oldschool"></div><figcaption><strong>Andorinha clássica</strong><span>Old school · Caio</span></figcaption></figure>
+      <figure class="obra" data-cat="pontilhismo"><div class="art art-pontilhismo"></div><figcaption><strong>Lua em pontos</strong><span>Pontilhismo · Duda</span></figcaption></figure>
+      <figure class="obra" data-cat="fineline"><div class="art art-fineline f2"></div><figcaption><strong>Constelação</strong><span>Fineline · Duda</span></figcaption></figure>
+      <figure class="obra" data-cat="blackwork"><div class="art art-blackwork b2"></div><figcaption><strong>Faixa de braço</strong><span>Blackwork · Caio</span></figcaption></figure>
+      <figure class="obra" data-cat="realismo"><div class="art art-realismo r2"></div><figcaption><strong>Leão em grafite</strong><span>Realismo · Nina</span></figcaption></figure>
+      <figure class="obra" data-cat="pontilhismo"><div class="art art-pontilhismo p2"></div><figcaption><strong>Degradê pontilhado</strong><span>Pontilhismo · Nina</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="artistas">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Artistas</span><h2>Quem segura a máquina</h2></div>
+    <div class="grid">
+      <article class="card"><div class="avatar">DU</div><h3>Duda Rangel</h3><p class="role">Fineline e pontilhismo</p><p>Traço fino, botânica e peças delicadas. Agenda aberta de terça a quinta.</p></article>
+      <article class="card"><div class="avatar">CA</div><h3>Caio Brandão</h3><p class="role">Blackwork e old school</p><p>Preto sólido, geometria e flash tradicional. Fundador da Ink Raiz.</p></article>
+      <article class="card"><div class="avatar">NI</div><h3>Nina Valente</h3><p class="role">Realismo</p><p>Retratos e animais em preto e cinza. Projetos grandes em sessões planejadas.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="orcamento">
+  <div class="container split wide-r">
+    <div class="sec-head">
+      <span class="eyebrow">Orçamento</span><h2>Conta sua ideia</h2>
+      <p>Quanto mais detalhe, mais certo o orçamento. Depois de enviar, mande as referências de imagem na mesma conversa do WhatsApp.</p>
+      <p class="note">Valor mínimo por sessão e sinal para reservar a data são informados no orçamento.</p>
+    </div>
+    <form class="panel form" data-wa-form="Salve! Quero um orçamento na Ink Raiz:" aria-label="Formulário de orçamento de tatuagem">
+      <div class="form-2">
+        <div class="field"><label for="t-nome">Seu nome</label><input id="t-nome" name="nome" autocomplete="name" required></div>
+        <div class="field"><label for="t-estilo">Estilo</label>
+          <select id="t-estilo" name="estilo"><option>Ainda não sei</option><option>Fineline</option><option>Blackwork</option><option>Realismo</option><option>Old school</option><option>Pontilhismo</option></select></div>
+        <div class="field"><label for="t-local">Local do corpo</label><input id="t-local" name="local" placeholder="Ex.: antebraço interno" required></div>
+        <div class="field"><label for="t-tam">Tamanho aproximado</label>
+          <select id="t-tam" name="tamanho"><option>Até 5 cm</option><option>5 a 10 cm</option><option>10 a 20 cm</option><option>Maior que 20 cm</option><option>Fechamento (braço, perna, costas)</option></select></div>
+      </div>
+      <div class="field"><label for="t-ideia">Descreva a ideia</label><textarea id="t-ideia" name="ideia" placeholder="Ex.: ramo de lavanda com o nome da minha avó em letra cursiva" required></textarea></div>
+      <div class="field"><label for="t-art">Artista preferido</label>
+        <select id="t-art" name="artista"><option>Tanto faz</option><option>Duda</option><option>Caio</option><option>Nina</option></select></div>
+      <button class="btn btn-primary btn-block" type="submit">Enviar pelo WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="cuidados">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Cuidados</span><h2>Antes e depois da sessão</h2></div>
+    <ol class="steps">
+      <li><h3>Antes</h3><p>Durma bem, coma algo e não beba álcool nas 24 h anteriores.</p></li>
+      <li><h3>Primeiras horas</h3><p>Tire o filme depois de 3 a 4 horas e lave com sabonete neutro e água fria.</p></li>
+      <li><h3>Primeiras semanas</h3><p>Pomada indicada em camada fina, sem coçar e sem tirar casquinha. Nada de praia ou piscina por 15 dias.</p></li>
+      <li><h3>Para sempre</h3><p>Protetor solar na tattoo cicatrizada. É o que mantém o preto preto.</p></li>
+    </ol>
+    <div class="faq" style="margin-top:2.5rem">
+      <details><summary>Dói muito?</summary><p>Depende do local e da pessoa. Costela, pé e mão costumam doer mais; antebraço e coxa, menos. A gente faz pausas sempre que precisar.</p></details>
+      <details><summary>Posso tatuar com menos de 18 anos?</summary><p>Não. Atendemos somente maiores de 18 anos, com documento com foto.</p></details>
+      <details><summary>Vocês fazem cobertura?</summary><p>Fazemos, depois de avaliar a tatuagem antiga. Em alguns casos indicamos laser antes para clarear.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contato">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">Estúdio</span><h2>Rua do Lavradio, 147</h2>
+      <p>2º andar · Lapa, Rio de Janeiro/RJ <span class="ficticio">fictício</span></p>
+      <dl class="info"><div><dt>Horários</dt><dd>Ter a sáb, 11h às 20h · só com hora marcada</dd></div></dl>
+      <div class="hero-actions"><a class="btn btn-primary" href="#orcamento">Fazer orçamento</a></div>
+    </div>
+    <div class="mapa" role="img" aria-label="Mapa ilustrativo da Lapa com a localização do estúdio"><span class="pin">Ink Raiz</span></div>
+  </div>
+</section>

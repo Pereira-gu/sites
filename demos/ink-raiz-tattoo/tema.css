@@ -1,0 +1,41 @@
+/* Ink Raiz Tattoo · artístico, preto e branco, ousado */
+:root{
+  --bg:#0A0A0A;--surface:#F2F0EB;--card:#141414;--card-alt:#FFFFFF;
+  --text:#F5F5F5;--muted:#B5B5B5;--border:#2B2B2B;--border-strong:#555;
+  --primary:#F5F5F5;--primary-hover:#FFFFFF;--on-primary:#0A0A0A;--accent:#F5F5F5;
+  --eyebrow:#F5F5F5;--price:#F5F5F5;--stars:#F5F5F5;--check:#F5F5F5;--primary-text:#F5F5F5;
+  --font-display:"Syne",Arial,sans-serif;--font-body:"Space Grotesk",system-ui,sans-serif;
+  --display-weight:800;--display-tracking:-.03em;--display-case:uppercase;--h1-max:3.6rem;--h2-max:2.6rem;
+  --radius:0;--radius-sm:0;--radius-btn:0;--radius-chip:0;
+  --btn-case:uppercase;--btn-tracking:.08em;
+  --header-bg:rgba(10,10,10,.92);--header-solid:#0A0A0A;--demo-bg:#F5F5F5;--demo-text:#0A0A0A;
+  --footer-bg:#000;--footer-text:#B5B5B5;--map-bg:#1A1A1A;--map-road:rgba(255,255,255,.18);
+  --avatar-bg:#0A0A0A;--avatar-text:#F5F5F5;--tag-bg:#2B2B2B;--tag-text:#F5F5F5;--input-bg:#0A0A0A;
+}
+.brand span{color:var(--text)}
+.eyebrow{border:1px solid currentColor;padding:.2rem .55rem}
+h1{font-size:clamp(1.9rem,7vw,3.6rem);line-height:1.02}
+/* seções claras invertem tudo */
+.sec-alt{--text:#0A0A0A;--muted:#4A4A4A;--border:#D2CEC6;--border-strong:#0A0A0A;--primary:#0A0A0A;--on-primary:#F5F5F5;--eyebrow:#0A0A0A;--check:#0A0A0A;--primary-text:#0A0A0A;--card:#FFFFFF;color:#0A0A0A}
+.sec-alt .card{background:#fff}
+.hero-art{min-height:360px;display:grid;place-items:center}
+.moldura{width:min(320px,76vw);aspect-ratio:3/4;border:2px solid #F5F5F5;padding:14px;transform:rotate(3deg)}
+.moldura .art{height:100%}
+.carimbo{position:absolute;left:4%;bottom:6%;width:110px;height:110px;border-radius:50%;border:2px dashed #F5F5F5;display:grid;place-items:center;text-align:center;font-family:var(--font-display);font-weight:800;line-height:1.1;transform:rotate(-14deg);background:#0A0A0A}
+.obras{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr))}
+.obra .art{aspect-ratio:1}
+.obra figcaption{display:flex;justify-content:space-between;gap:.5rem;padding:.7rem 0 0;font-size:.9rem;flex-wrap:wrap}
+.obra figcaption span{color:var(--muted)}
+.art{background-color:#F2F0EB;border:1px solid #2B2B2B}
+.art-fineline{background:radial-gradient(circle at 50% 50%,transparent 30%,#111 30.4%,transparent 31%),radial-gradient(circle at 50% 50%,transparent 42%,#111 42.3%,transparent 42.8%),linear-gradient(45deg,transparent 49.6%,#111 49.8% 50.2%,transparent 50.4%),linear-gradient(-45deg,transparent 49.6%,#111 49.8% 50.2%,transparent 50.4%),#F2F0EB}
+.art-fineline.f2{background:radial-gradient(circle at 20% 30%,#111 1.5%,transparent 2%),radial-gradient(circle at 45% 20%,#111 1.2%,transparent 1.7%),radial-gradient(circle at 70% 40%,#111 1.8%,transparent 2.3%),radial-gradient(circle at 60% 70%,#111 1.2%,transparent 1.7%),radial-gradient(circle at 30% 75%,#111 1.5%,transparent 2%),linear-gradient(28deg,transparent 49.7%,#111 49.85% 50.15%,transparent 50.3%),#F2F0EB}
+.art-blackwork{background:conic-gradient(from 22.5deg,#111 0 12.5%,#F2F0EB 0 25%,#111 0 37.5%,#F2F0EB 0 50%,#111 0 62.5%,#F2F0EB 0 75%,#111 0 87.5%,#F2F0EB 0);-webkit-mask:radial-gradient(circle,#000 0 62%,transparent 62.5%);mask:radial-gradient(circle,#000 0 62%,transparent 62.5%);background-color:#111;outline:1px solid #2B2B2B}
+.obra .art-blackwork{-webkit-mask:none;mask:none;background:radial-gradient(circle,#F2F0EB 0 16%,transparent 16.5%),conic-gradient(from 22.5deg,#111 0 12.5%,#F2F0EB 0 25%,#111 0 37.5%,#F2F0EB 0 50%,#111 0 62.5%,#F2F0EB 0 75%,#111 0 87.5%,#F2F0EB 0)}
+.art-blackwork.b2{background:repeating-linear-gradient(90deg,#F2F0EB 0 8%,#111 8% 14%),linear-gradient(#F2F0EB 0 30%,#111 30% 70%,#F2F0EB 70%);background-blend-mode:difference}
+.art-realismo{background:radial-gradient(ellipse 38% 46% at 50% 45%,#1a1a1a,#555 45%,#9a9a9a 70%,#F2F0EB 100%)}
+.art-realismo.r2{background:radial-gradient(circle at 35% 40%,#111 0 6%,transparent 7%),radial-gradient(circle at 65% 40%,#111 0 6%,transparent 7%),radial-gradient(ellipse 45% 50% at 50% 50%,#3a3a3a,#7a7a7a 55%,#c9c9c9 80%,#F2F0EB)}
+.art-oldschool{background:radial-gradient(circle at 30% 55%,#111 0 16%,transparent 16.5%),radial-gradient(circle at 70% 55%,#111 0 16%,transparent 16.5%),linear-gradient(160deg,transparent 40%,#111 40% 47%,transparent 47%),linear-gradient(20deg,transparent 40%,#111 40% 47%,transparent 47%),repeating-linear-gradient(0deg,#F2F0EB 0 10px,#E2DED5 10px 12px)}
+.art-pontilhismo{background:radial-gradient(#111 30%,transparent 34%) 0 0/10px 10px,#F2F0EB;-webkit-mask:radial-gradient(circle at 60% 40%,#000 0 40%,rgba(0,0,0,.25) 55%,transparent 70%);mask:radial-gradient(circle at 60% 40%,#000 0 40%,rgba(0,0,0,.25) 55%,transparent 70%)}
+.obra .art-pontilhismo{-webkit-mask:none;mask:none;background:radial-gradient(circle at 55% 45%,transparent 0 30%,#F2F0EB 52%),radial-gradient(#111 30%,transparent 34%) 0 0/9px 9px,#F2F0EB}
+.art-pontilhismo.p2{background:linear-gradient(90deg,transparent,#F2F0EB 85%),radial-gradient(#111 32%,transparent 36%) 0 0/8px 8px,#F2F0EB}
+.btn-ghost{--ghost-hover:rgba(255,255,255,.1)}
