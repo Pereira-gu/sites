@@ -327,40 +327,57 @@
       </div>
     </section>
 
-    <!-- 8. PERGUNTAS -->
+    <!-- 8. PERGUNTAS: lista à esquerda, resposta no painel laranja -->
     <section class="perguntas" id="perguntas" aria-labelledby="t-perguntas">
       <div class="caixa">
         <h2 class="titulo reveal" id="t-perguntas">Perguntas</h2>
-
-        <div class="fichas reveal" data-fichas>
-          <details class="ficha" name="faq" open>
-            <summary><span class="ficha__pergunta">Quanto tempo leva?</span></summary>
-            <p>Em torno de uma a duas semanas para os sites mais simples. O prazo certo do seu vai junto com o orçamento.</p>
-          </details>
-          <details class="ficha" name="faq">
-            <summary><span class="ficha__pergunta">Como é o pagamento?</span></summary>
-            <p>Por Pix: 50% para começar e 50% na entrega, com até 2 rodadas de ajustes.</p>
-          </details>
-          <details class="ficha" name="faq">
-            <summary><span class="ficha__pergunta">Atende minha cidade?</span></summary>
-            <p>Sim. Atendo todo o Brasil, 100% online: a conversa é pelo direct ou pelo WhatsApp e você aprova tudo pelo celular.</p>
-          </details>
-          <details class="ficha" name="faq">
-            <summary><span class="ficha__pergunta">Consigo trocar preço e foto depois?</span></summary>
-            <p>Sim. Você me manda pelo WhatsApp o que mudou e eu atualizo. Isso faz parte da manutenção, que é opcional.</p>
-          </details>
-          <details class="ficha" name="faq">
-            <summary><span class="ficha__pergunta">E depois que o site fica pronto?</span></summary>
-            <p>Se quiser, tem a manutenção: pequenas alterações, atualização de preços e fotos, e suporte. O valor vem junto com o orçamento.</p>
-          </details>
-          <details class="ficha" name="faq">
-            <summary><span class="ficha__pergunta">O que é domínio?</span></summary>
-            <p>É o endereço do site na internet, como sualoja.com.br. O domínio próprio fica no seu nome e por sua conta, e eu te ajudo a registrar.</p>
-          </details>
-          <details class="ficha" name="faq">
-            <summary><span class="ficha__pergunta">Quem é o dono do site?</span></summary>
-            <p>Você, o cliente. O site é seu.</p>
-          </details>
+        <div class="faq reveal" data-faq>
+          <div class="faq__lista" role="tablist" aria-label="Perguntas frequentes">
+          <button type="button" role="tab" id="pq-1" aria-controls="pr-1" aria-selected="true">Quanto tempo leva?</button>
+          <button type="button" role="tab" id="pq-2" aria-controls="pr-2" aria-selected="false" tabindex="-1">Como é o pagamento?</button>
+          <button type="button" role="tab" id="pq-3" aria-controls="pr-3" aria-selected="false" tabindex="-1">Atende minha cidade?</button>
+          <button type="button" role="tab" id="pq-4" aria-controls="pr-4" aria-selected="false" tabindex="-1">Consigo trocar preço e foto depois?</button>
+          <button type="button" role="tab" id="pq-5" aria-controls="pr-5" aria-selected="false" tabindex="-1">E depois que o site fica pronto?</button>
+          <button type="button" role="tab" id="pq-6" aria-controls="pr-6" aria-selected="false" tabindex="-1">O que é domínio?</button>
+          <button type="button" role="tab" id="pq-7" aria-controls="pr-7" aria-selected="false" tabindex="-1">Quem é o dono do site?</button>
+          </div>
+          <div class="faq__paineis">
+        <div class="resposta" role="tabpanel" id="pr-1" aria-labelledby="pq-1">
+          <h3>Quanto tempo leva?</h3>
+          <p>Em torno de uma a duas semanas para os sites mais simples. O prazo certo do seu vai junto com o orçamento.</p>
+          <a class="btn btn--tinta" data-direct href="https://www.instagram.com/dev.gustavop/" target="_blank" rel="noopener"><svg class="btn__ico" aria-hidden="true"><use href="#i-dm"/></svg>Me chama no direct</a>
+        </div>
+        <div class="resposta" role="tabpanel" id="pr-2" aria-labelledby="pq-2" hidden>
+          <h3>Como é o pagamento?</h3>
+          <p>Por Pix: 50% para começar e 50% na entrega, com até 2 rodadas de ajustes.</p>
+          <a class="btn btn--tinta" data-direct href="https://www.instagram.com/dev.gustavop/" target="_blank" rel="noopener"><svg class="btn__ico" aria-hidden="true"><use href="#i-dm"/></svg>Me chama no direct</a>
+        </div>
+        <div class="resposta" role="tabpanel" id="pr-3" aria-labelledby="pq-3" hidden>
+          <h3>Atende minha cidade?</h3>
+          <p>Sim. Atendo todo o Brasil, 100% online: a conversa é pelo direct ou pelo WhatsApp e você aprova tudo pelo celular.</p>
+          <a class="btn btn--tinta" data-direct href="https://www.instagram.com/dev.gustavop/" target="_blank" rel="noopener"><svg class="btn__ico" aria-hidden="true"><use href="#i-dm"/></svg>Me chama no direct</a>
+        </div>
+        <div class="resposta" role="tabpanel" id="pr-4" aria-labelledby="pq-4" hidden>
+          <h3>Consigo trocar preço e foto depois?</h3>
+          <p>Sim. Você me manda pelo WhatsApp o que mudou e eu atualizo. Isso faz parte da manutenção, que é opcional.</p>
+          <a class="btn btn--tinta" data-direct href="https://www.instagram.com/dev.gustavop/" target="_blank" rel="noopener"><svg class="btn__ico" aria-hidden="true"><use href="#i-dm"/></svg>Me chama no direct</a>
+        </div>
+        <div class="resposta" role="tabpanel" id="pr-5" aria-labelledby="pq-5" hidden>
+          <h3>E depois que o site fica pronto?</h3>
+          <p>Se quiser, tem a manutenção: pequenas alterações, atualização de preços e fotos, e suporte. O valor vem junto com o orçamento.</p>
+          <a class="btn btn--tinta" data-direct href="https://www.instagram.com/dev.gustavop/" target="_blank" rel="noopener"><svg class="btn__ico" aria-hidden="true"><use href="#i-dm"/></svg>Me chama no direct</a>
+        </div>
+        <div class="resposta" role="tabpanel" id="pr-6" aria-labelledby="pq-6" hidden>
+          <h3>O que é domínio?</h3>
+          <p>É o endereço do site na internet, como sualoja.com.br. O domínio próprio fica no seu nome e por sua conta, e eu te ajudo a registrar.</p>
+          <a class="btn btn--tinta" data-direct href="https://www.instagram.com/dev.gustavop/" target="_blank" rel="noopener"><svg class="btn__ico" aria-hidden="true"><use href="#i-dm"/></svg>Me chama no direct</a>
+        </div>
+        <div class="resposta" role="tabpanel" id="pr-7" aria-labelledby="pq-7" hidden>
+          <h3>Quem é o dono do site?</h3>
+          <p>Você, o cliente. O site é seu.</p>
+          <a class="btn btn--tinta" data-direct href="https://www.instagram.com/dev.gustavop/" target="_blank" rel="noopener"><svg class="btn__ico" aria-hidden="true"><use href="#i-dm"/></svg>Me chama no direct</a>
+        </div>
+          </div>
         </div>
       </div>
     </section>

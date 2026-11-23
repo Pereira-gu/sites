@@ -179,9 +179,37 @@ if ('IntersectionObserver' in window && flutuante) {
   $$('.heroi, .orcamento, .rodape').forEach((el) => secoes.observe(el));
 }
 
-/* --- Perguntas --- */
-const fichas = $$('[data-fichas] .ficha');
-/* Uma aberta por vez também nos navegadores que não fecham as outras sozinhos */
-fichas.forEach((ficha) => ficha.addEventListener('toggle', () => {
-  if (ficha.open) fichas.forEach((f) => { if (f !== ficha) f.open = false; });
-}));
+/* --- Perguntas: escolher na lista mostra a resposta no painel --- */
+const faq = $('[data-faq]');
+if (faq) {
+  const abas = $$('[role="tab"]', faq);
+  const mostrar = (aba, focar) => {
+    abas.forEach((b) => {
+      const ativa = b === aba;
+      b.setAttribute('aria-selected', ativa);
+      b.tabIndex = ativa ? 0 : -1;
+      $('#' + b.getAttribute('aria-controls')).hidden = !ativa;
+    });
+    if (focar) aba.focus();
+  };
+  const noPc = matchMedia('(min-width: 900px)');
+  abas.forEach((aba, i) => {
+    aba.addEventListener('click', () => {
+      mostrar(aba);
+      /* No celular o painel fica embaixo da lista: rola até ele se estiver fora da tela */
+      if (!noPc.matches) {
+        const painel = $('#' + aba.getAttribute('aria-controls'));
+        const r = painel.getBoundingClientRect();
+        if (r.top > innerHeight - 120) painel.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
+      }
+    });
+    /* No PC, passar o mouse já troca a resposta */
+    aba.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse' && noPc.matches) mostrar(aba); });
+    aba.addEventListener('keydown', (e) => {
+      const passo = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
+      if (e.key === 'Home') { e.preventDefault(); mostrar(abas[0], true); }
+      else if (e.key === 'End') { e.preventDefault(); mostrar(abas[abas.length - 1], true); }
+      else if (passo) { e.preventDefault(); mostrar(abas[(i + passo + abas.length) % abas.length], true); }
+    });
+  });
+}
