@@ -478,26 +478,34 @@ html.js .etapa:not(.aberta) .etapa__texto { display: none; }
 }
 
 /* ==========================================================================
-   Rodapé: foto de um lado, menu do outro
+   Rodapé: fecha com os contatos grandes e o nome de ponta a ponta
    ========================================================================== */
-.rodape { display: grid; background: var(--laranja); }
-.rodape__foto img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 20% 30%; }
-.rodape__menu { display: grid; gap: 32px; align-content: start; padding: 48px var(--margem) 40px; }
-.rodape__marca { font-weight: 800; }
-.rodape__links { display: grid; gap: 14px; }
-.rodape__links a {
-  display: inline-block;
-  font: 900 clamp(1.75rem, 3vw, 2.5rem)/1 var(--fonte-titulo); text-transform: uppercase; text-decoration: none;
+.rodape { background: var(--laranja); color: var(--tinta); padding-top: 96px; overflow: hidden; }
+.rodape__grade { display: grid; gap: 56px; }
+.rodape__contato { display: grid; gap: 8px; justify-items: start; }
+.rodape__chamada { font-size: var(--t-lead); font-weight: 800; margin-bottom: 8px; }
+.rodape__canal {
+  display: inline-flex; align-items: center; gap: .3em;
+  font: 900 var(--t-titulo)/1 var(--fonte-titulo); text-transform: uppercase; text-decoration: none;
   transition: translate .2s var(--saida);
 }
-@media (hover: hover) { .rodape__links a:hover { translate: 10px 0; } }
-.rodape__contato { display: grid; gap: 8px; font-weight: 700; }
-.rodape__legal { font-size: var(--t-pequeno); }
+.rodape__canal svg { width: .62em; height: .62em; flex: none; }
+@media (hover: hover) { .rodape__canal:hover { translate: 10px 0; } }
+.rodape__links { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; }
+.rodape__links a { font-weight: 700; text-decoration: none; }
+.rodape__links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.rodape__nome {
+  margin: 72px 0 0;
+  padding-inline: var(--margem);
+  font: 900 28vw/.8 var(--fonte-titulo); text-transform: uppercase; letter-spacing: -.02em;
+}
+.rodape__base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-block: 24px 32px; font-size: var(--t-pequeno); font-weight: 600; }
 @media (min-width: 900px) {
-  .rodape { grid-template-columns: 1fr 1fr; min-height: 100svh; }
-  .rodape__foto img { aspect-ratio: auto; }
-  .rodape__menu { padding: 80px 32px 32px 8%; }
-  .rodape__legal { align-self: end; }
+  .rodape { padding-top: 144px; }
+  .rodape__grade { grid-template-columns: repeat(12, 1fr); column-gap: 32px; align-items: end; }
+  .rodape__contato { grid-column: 1 / 8; }
+  .rodape__nav { grid-column: 9 / 13; }
+  .rodape__nome { font-size: 14vw; margin-top: 120px; white-space: nowrap; text-align: center; padding-inline: 0; }
 }
 
 /* Botão flutuante */
