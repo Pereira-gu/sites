@@ -532,3 +532,9 @@ html:not(.js) .resposta .btn { display: none; } /* sem script: todas as resposta
 .flutuante svg { width: 28px; height: 28px; }
 .flutuante:focus-visible { outline: 3px solid var(--laranja); outline-offset: 3px; }
 .flutuante--oculto { opacity: 0; transform: translateY(16px); pointer-events: none; }
+
+/* Mais demos e Quem faz */
+.mais-demos { margin-top: 16px; max-width: 60ch; line-height: 1.45; }
+.mais-demos a { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.quem { padding-block: var(--secao); }
+.quem__texto { margin-top: 20px; max-width: 52ch; line-height: 1.5; }
